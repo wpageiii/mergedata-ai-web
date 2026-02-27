@@ -34,7 +34,7 @@ export default function Home() {
           <div className="absolute bottom-[-240px] left-[-160px] h-[520px] w-[520px] rounded-full bg-cyan-500/10 blur-3xl" />
         </div>
 
-        <div className="mx-auto max-w-7xl px-3 pb-16 pt-10 sm:px-4 md:px-6 md:pb-24 md:pt-16">
+        <div className="mx-auto max-w-7xl px-3 pb-16 pt-8 sm:px-4 md:px-6 md:pb-24 md:pt-12">
           <div className="grid gap-10 md:grid-cols-2 md:items-center">
             <div>
               <div className="flex flex-wrap gap-2">
@@ -65,7 +65,7 @@ export default function Home() {
                 </Link>
               </div>
 
-              <div className="mt-6 inline-flex rounded-2xl bg-white/5 px-4 py-3 text-sm font-semibold text-white ring-1 ring-white/10">
+              <div className="mt-6 inline-flex rounded-2xl bg-gradient-to-r from-indigo-500/15 via-fuchsia-500/10 to-cyan-500/10 px-5 py-3 text-base font-bold text-white ring-1 ring-white/15">
                 Not another reporting tool — the operational system of record for dealership truth.
               </div>
             </div>
