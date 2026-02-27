@@ -130,7 +130,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How it works (placeholder until copy arrives) */}
+      {/* How it works */}
       <section id="how" className="bg-black">
         <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
           <div className="max-w-2xl">
@@ -138,23 +138,116 @@ export default function Home() {
               How it works
             </h2>
             <p className="mt-3 text-sm leading-6 text-zinc-300">
-              Next up: we’ll plug in the full “How it Works” narrative and steps.
+              MergeData is built to replace fragmented reporting with an operational truth screen—then turn
+              that truth into daily action.
             </p>
           </div>
 
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
-            <Feature
-              title="Connect your sources"
-              desc="Hook up your dealership systems and data feeds. (Integration list coming next.)"
-            />
-            <Feature
-              title="Kai organizes the work"
-              desc="Mentions, tasks, assignments, and summaries are generated and routed to the right owners."
-            />
-            <Feature
-              title="Operators execute"
-              desc="Operators resolve conversations and tasks, escalating only what needs attention."
-            />
+          <div className="mt-10 grid gap-4">
+            {/* Step 1 */}
+            <div className="grid gap-4 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-center">
+              <div>
+                <div className="text-xs font-semibold text-zinc-300">01</div>
+                <div className="mt-2 text-xl font-semibold text-white">
+                  Too many dashboards, not enough time
+                </div>
+                <p className="mt-3 text-sm leading-6 text-zinc-300">
+                  We know it. Our previous company was called <span className="text-white">Dashboard</span>—one might say we had
+                  a part in creating this mess.
+                </p>
+                <p className="mt-3 text-sm leading-6 text-zinc-300">
+                  Dealers do not need another dashboard tool.
+                </p>
+              </div>
+              <div className="rounded-2xl bg-black/30 p-6 ring-1 ring-white/10">
+                <div className="text-sm font-semibold text-white">Graphic placeholder</div>
+                <p className="mt-2 text-xs leading-5 text-zinc-300">
+                  Dealer in an office staring at ~10 screens/dashboards.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="grid gap-4 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-center">
+              <div>
+                <div className="text-xs font-semibold text-zinc-300">02</div>
+                <div className="mt-2 text-xl font-semibold text-white">
+                  Merge your tech stack into a single unified platform
+                </div>
+                <p className="mt-3 text-sm leading-6 text-zinc-300">
+                  MergeData is the dealership operating intelligence platform that unifies DMS, CRM, and other vendor
+                  systems into one trusted decision environment.
+                </p>
+                <p className="mt-3 text-sm leading-6 text-zinc-300">
+                  MergeData is not “another reporting tool.” It is the operational system of record for dealership truth.
+                </p>
+              </div>
+              <div className="rounded-2xl bg-black/30 p-6 ring-1 ring-white/10">
+                <div className="text-sm font-semibold text-white">Graphic placeholder</div>
+                <p className="mt-2 text-xs leading-5 text-zinc-300">
+                  All vendor data flows in → transformed → stored as a single repository/canonical model.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="grid gap-4 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-center">
+              <div>
+                <div className="text-xs font-semibold text-zinc-300">03</div>
+                <div className="mt-2 text-xl font-semibold text-white">
+                  Kai is an embedded AI performance operator inside MergeData
+                </div>
+                <p className="mt-3 text-sm leading-6 text-zinc-300">
+                  Kai is not a generic chatbot.
+                </p>
+                <p className="mt-3 text-sm leading-6 text-zinc-300">
+                  Kai moves the dealership from “Here’s a report.” to “Here’s what changed, why it changed, and what actions
+                  to take today.”
+                </p>
+
+                <div className="mt-6 rounded-2xl bg-black/30 p-5 ring-1 ring-white/10">
+                  <div className="text-sm font-semibold text-white">The bulletproof 5</div>
+                  <ul className="mt-3 space-y-2 text-sm text-zinc-200">
+                    <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-400" />Detect — monitoring + anomaly/threshold detection</li>
+                    <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-400" />Explain — root-cause narratives tied to drillable data</li>
+                    <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-400" />Prioritize — role-based daily priorities (what matters today)</li>
+                    <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-400" />Recommend — next best actions / corrective steps</li>
+                    <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-400" />Summarize — executive summaries (daily/weekly), consistent format</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="rounded-2xl bg-black/30 p-6 ring-1 ring-white/10">
+                <div className="text-sm font-semibold text-white">Image placeholder</div>
+                <p className="mt-2 text-xs leading-5 text-zinc-300">
+                  Derived from main screen: Kai humble extension / embedded operator panel.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="grid gap-4 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-start">
+              <div>
+                <div className="text-xs font-semibold text-zinc-300">04</div>
+                <div className="mt-2 text-xl font-semibold text-white">Unleash the bots</div>
+                <p className="mt-3 text-sm leading-6 text-zinc-300">
+                  After MergeData + Kai are proven at scale, we layer purpose-built expert agents that operate specific
+                  dealership workflows.
+                </p>
+                <p className="mt-3 text-sm leading-6 text-zinc-300">
+                  These are not chatbots; they are department operators with measurable KPIs.
+                </p>
+              </div>
+              <div className="rounded-2xl bg-black/30 p-6 ring-1 ring-white/10">
+                <div className="text-sm font-semibold text-white">Roadmap examples</div>
+                <ul className="mt-4 space-y-2 text-sm text-zinc-200">
+                  <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-400" />MD Titling Agent — reduces funding friction + title backlog + compliance risk</li>
+                  <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-400" />MD Parts Ordering Agent — optimizes parts ordering workflow (including DMS writeback where allowed)</li>
+                  <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-400" />MD Inventory Acquisition Agent — improves buy discipline, turn, and margin protection</li>
+                  <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-400" />MD Recon Expert Agent — reduces recon days, cost variance, and frontline readiness delays</li>
+                  <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-400" />MD Payment Plan Agent — optimizes sales spiffs/incentives for behavior + margin efficiency</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
