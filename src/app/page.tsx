@@ -111,7 +111,7 @@ export default function Home() {
               Replace dashboards with an operating truth screen.
             </h2>
             <p className="mt-3 text-sm leading-6 text-zinc-300">
-              MergeData is built to unify your tech stack, prove the numbers, and turn changes into action.
+              MergeData is built to unify your tech stack, prove the numbers, and turn reporting into action.
             </p>
           </div>
 
