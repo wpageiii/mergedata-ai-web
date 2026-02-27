@@ -81,41 +81,50 @@ export default function PricingPage() {
           Start with what you need today—add sources, environments, and SLAs as you grow.
         </p>
 
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
+        <div className="mt-10 grid gap-4 md:grid-cols-2">
           <Plan
-            name="Starter"
-            price="$"
-            desc="For small teams getting their first unified model."
-            bullets={["Core connectors", "Daily refresh", "Single destination"]}
-            cta="Talk to us"
-            href="/contact"
-          />
-          <Plan
-            name="Growth"
-            price="$$"
-            desc="For teams that depend on dashboards staying correct."
-            bullets={["Incremental syncs", "Data quality checks", "Slack alerting"]}
+            name="Standard"
+            price="$995 / month"
+            desc="Merge Data API + standard connections with a dedicated Customer Success agent."
+            bullets={[
+              "Standard connections for DMS, CRM & Website",
+              "Dedicated Merge Data Customer Success agent (install, training, maintenance)",
+              "No terms — cancel anytime",
+              "$50 in AI token credits included (add more as needed)",
+            ]}
             cta="Request a demo"
             href="/contact"
             highlight
           />
           <Plan
             name="Enterprise"
-            price="Custom"
-            desc="Security + control for sensitive workloads."
-            bullets={["SSO / RBAC", "Multiple envs", "Dedicated support + SLAs"]}
-            cta="Contact sales"
+            price="25 stores +"
+            desc="For groups that need scale, governance, and custom integrations."
+            bullets={[
+              "Multi-store rollouts + centralized visibility",
+              "Custom integrations and SLAs",
+              "Security + access controls",
+            ]}
+            cta="Contact us"
             href="/contact"
           />
         </div>
 
-        <div className="mt-14 rounded-3xl bg-white/5 p-8 ring-1 ring-white/10">
-          <div className="text-sm font-semibold text-white">What we’ll ask on the call</div>
-          <div className="mt-3 grid gap-2 text-sm text-zinc-300 md:grid-cols-2">
-            <div>• Sources (CRM, billing, product DB, spreadsheets)</div>
-            <div>• Destination (Snowflake/BigQuery/Redshift)</div>
-            <div>• Volume (rows/day, customers, events)</div>
-            <div>• Definitions you care about (MRR, churn, activation)</div>
+        <div className="mt-14 grid gap-4 md:grid-cols-2">
+          <div className="rounded-3xl bg-white/5 p-8 ring-1 ring-white/10">
+            <div className="text-sm font-semibold text-white">Installation</div>
+            <div className="mt-3 text-2xl font-bold text-white">$1,990 one-time</div>
+            <p className="mt-3 text-sm leading-6 text-zinc-300">
+              Installation fees are split into two payments.
+            </p>
+          </div>
+
+          <div className="rounded-3xl bg-white/5 p-8 ring-1 ring-white/10">
+            <div className="text-sm font-semibold text-white">AI token credits</div>
+            <p className="mt-3 text-sm leading-6 text-zinc-300">
+              Standard includes up to <span className="font-semibold text-white">$50</span> in token credits.
+              Teams with higher AI usage requirements can add additional token credits as needed.
+            </p>
           </div>
         </div>
       </main>
