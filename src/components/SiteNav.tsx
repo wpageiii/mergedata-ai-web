@@ -12,26 +12,32 @@ export function SiteNav() {
         </Link>
 
         <nav className="hidden items-center gap-6 text-sm text-zinc-200 md:flex">
-          <Link href="#features" className="hover:text-white">
-            Features
+          <Link href="#home" className="hover:text-white">
+            Home
           </Link>
           <Link href="#how" className="hover:text-white">
-            How it works
+            How it Works
           </Link>
-          <Link href="#security" className="hover:text-white">
-            Security
+          <Link href="#integrations" className="hover:text-white">
+            Integrations
           </Link>
-          <Link href="/pricing" className="hover:text-white">
-            Pricing
+          <Link href="#about" className="hover:text-white">
+            About Us
           </Link>
         </nav>
 
         <div className="flex items-center gap-2">
           <Link
-            href="/contact"
+            href="/signup"
             className="hidden rounded-full px-4 py-2 text-sm font-medium text-white ring-1 ring-white/20 hover:bg-white/5 md:inline-flex"
           >
-            Talk to us
+            Sign Up
+          </Link>
+          <Link
+            href="/signin"
+            className="hidden rounded-full px-4 py-2 text-sm font-medium text-white ring-1 ring-white/20 hover:bg-white/5 md:inline-flex"
+          >
+            Sign In
           </Link>
           <Link
             href="#demo"
