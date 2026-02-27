@@ -248,7 +248,6 @@ export default function Home() {
 
           <div className="mt-10 space-y-10">
             <div>
-              <div className="text-sm font-semibold text-white">Tier 1 — Must-have for “truth + tasks”</div>
               <div className="mt-4">
                 <LogoCarousel
                   logos={[
@@ -260,18 +259,15 @@ export default function Home() {
                     { name: "DealerSocket", src: "/legacy/logo-dealersocket.png", badge: "CRM" },
                     { name: "DealerMine", src: "/legacy/logo-dealermine.png", badge: "CRM" },
                   ]}
-                  label="Tier 1"
+                  label="Tier 1 — Must-have for truth + tasks"
                   itemMinWidth={240}
-                  itemPaddingY={30}
+                  itemPaddingY={26}
                   showBadges
                 />
               </div>
             </div>
 
             <div>
-              <div className="text-sm font-semibold text-white">
-                Tier 2 — Closes the loop (behavior → outcomes → accelerators)
-              </div>
               <div className="mt-4">
                 <LogoCarousel
                   logos={[
@@ -279,9 +275,9 @@ export default function Home() {
                     { name: "Adam", src: "/legacy/logo-adam.png", badge: "Other" },
                     { name: "RYR", src: "/legacy/logo-ryr.png", badge: "Other" },
                   ]}
-                  label="Tier 2"
+                  label="Tier 2 — Closes the loop (behavior → outcomes → accelerators)"
                   itemMinWidth={240}
-                  itemPaddingY={30}
+                  itemPaddingY={26}
                   showBadges
                 />
               </div>

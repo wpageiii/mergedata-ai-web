@@ -79,14 +79,14 @@ export function LogoCarousel({
               <Image
                 src={x.src}
                 alt={x.name}
-                width={180}
-                height={56}
-                className="h-8 w-auto opacity-90"
+                width={220}
+                height={70}
+                className="h-10 w-auto opacity-95"
               />
             </div>
             {showBadges && x.badge ? (
               <div className="px-4 pb-4">
-                <span className="inline-flex items-center rounded-full bg-black/30 px-3 py-1 text-[11px] font-medium text-zinc-200 ring-1 ring-white/10">
+                <span className="inline-flex items-center rounded-full bg-indigo-500/20 px-3 py-1 text-[11px] font-semibold text-indigo-100 ring-1 ring-indigo-400/30">
                   {x.badge}
                 </span>
               </div>

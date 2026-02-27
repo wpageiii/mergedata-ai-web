@@ -11,11 +11,11 @@ export function Footer() {
             </span>
             <span>MergeData.ai</span>
           </div>
-          <p className="text-sm text-zinc-400">
+          <p className="text-base text-zinc-300">
             Unified analytics without the glue code. Connect sources, normalize data, and deliver clean tables
             to your warehouse.
           </p>
-          <p className="text-xs text-zinc-500">© {new Date().getFullYear()} MergeData.ai</p>
+          <p className="text-sm text-zinc-500">© {new Date().getFullYear()} MergeData.ai</p>
         </div>
 
         <div className="grid grid-cols-2 gap-8 md:col-span-2 md:grid-cols-3">
