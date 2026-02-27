@@ -119,7 +119,7 @@ export default function Home() {
           <div className="mt-10 grid gap-6">
             {/* 01 */}
             <Reveal from="left" delayMs={0}>
-              <div className="grid gap-6 rounded-3xl bg-white/5 p-6 ring-1 ring-white/15 md:grid-cols-2 md:items-center">
+              <div className="grid gap-6 rounded-3xl bg-white/10 p-6 ring-1 ring-white/25 md:grid-cols-2 md:items-center">
               <div>
                 <div className="text-sm font-semibold text-zinc-300">01.</div>
                 <div className="mt-2 text-2xl font-semibold text-white">Too many dashboards, not enough time</div>
@@ -169,7 +169,7 @@ export default function Home() {
 
             {/* 03 */}
             <Reveal from="left" delayMs={75}>
-              <div className="grid gap-6 rounded-3xl bg-white/5 p-6 ring-1 ring-white/15 md:grid-cols-2 md:items-center">
+              <div className="grid gap-6 rounded-3xl bg-white/10 p-6 ring-1 ring-white/25 md:grid-cols-2 md:items-center">
               <div>
                 <div className="text-sm font-semibold text-zinc-300">03.</div>
                 <div className="mt-2 text-2xl font-semibold text-white">
