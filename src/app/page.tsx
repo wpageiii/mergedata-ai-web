@@ -102,16 +102,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Bottom tag / value */}
-      <section className="border-y border-white/10 bg-black">
-        <div className="mx-auto max-w-6xl px-4 py-10">
-          <div className="text-sm leading-6 text-zinc-300">
-            MergeData replaces fragmented dealership reporting with one operational truth screen, and Kai
-            turns it into daily priorities, tasks, and executive summaries.
-          </div>
-        </div>
-      </section>
-
       {/* How it works (revamp: 01/02/03 cards style) */}
       <section id="how" className="bg-[#050714]">
         <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
