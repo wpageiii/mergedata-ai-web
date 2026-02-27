@@ -242,7 +242,7 @@ export default function Home() {
               MergeData prioritizes integrations that unlock operator leverage immediately.
             </h2>
             <p className="mt-3 text-sm leading-6 text-zinc-300">
-              We start where “truth + tasks” become possible—then add systems that close the loop between behavior and outcomes.
+              Seamless connections to the dealership systems that matter.
             </p>
           </div>
 
@@ -284,12 +284,18 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-10 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
-            <div className="text-sm font-semibold text-white">Bottom line</div>
-            <p className="mt-3 text-sm leading-6 text-zinc-300">
-              The core priority of MergeData is to increase the data funnel—which reduces the number of screens you need to manage.
-              Merge these systems into a unified platform so Kai can turn truth into daily priorities.
-            </p>
+          <div className="mt-10 overflow-hidden rounded-3xl bg-white/5 ring-1 ring-white/10">
+            <div className="bg-gradient-to-r from-indigo-500/15 via-fuchsia-500/10 to-cyan-500/10 px-6 py-4">
+              <div className="text-xs font-semibold uppercase tracking-wider text-zinc-200/90">Bottom line</div>
+            </div>
+            <div className="px-6 py-6">
+              <p className="text-lg font-semibold leading-7 text-white md:text-xl">
+                <span className="text-indigo-200">“</span>
+                The core priority of MergeData is to increase the data funnel—which reduces the number of screens you need to manage.
+                Merge these systems into a unified platform so Kai can turn truth into daily priorities.
+                <span className="text-indigo-200">”</span>
+              </p>
+            </div>
           </div>
         </div>
       </section>
