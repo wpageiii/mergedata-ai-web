@@ -233,58 +233,67 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Integrations (revamp: carousel) */}
+      {/* Integrations (tiers) */}
       <section id="integrations" className="border-y border-white/10 bg-[#050714]">
         <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400">Integrations</p>
             <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white md:text-3xl">
-              Seamless integrations for automotive dealerships
+              MergeData prioritizes integrations that unlock operator leverage immediately.
             </h2>
             <p className="mt-3 text-sm leading-6 text-zinc-300">
-              MergeData allows you to extract data & insights related to DMS providers, CRM, and other websites.
+              We start where “truth + tasks” become possible—then add systems that close the loop between behavior and outcomes.
             </p>
           </div>
 
-          <div className="mt-10">
-            <LogoCarousel
-              logos={[
-                { name: "Adam", src: "/legacy/logo-adam.png" },
-                { name: "Automate", src: "/legacy/logo-automate.png" },
-                { name: "AutoSoft", src: "/legacy/logo-autosoft.png" },
-                { name: "CarGurus", src: "/legacy/logo-cargurus.png" },
-                { name: "CDK", src: "/legacy/logo-cdk.png" },
-                { name: "Dealertrack", src: "/legacy/logo-dealer-track.png" },
-                { name: "DealerMine", src: "/legacy/logo-dealermine.png" },
-                { name: "DealerSocket", src: "/legacy/logo-dealersocket.png" },
-                { name: "Elead One", src: "/legacy/logo-eleadOne.png" },
-                { name: "RYR", src: "/legacy/logo-ryr.png" },
-              ]}
-              label="1 / 10"
-            />
+          <div className="mt-10 space-y-10">
+            <div>
+              <div className="text-sm font-semibold text-white">Tier 1 — Must-have for “truth + tasks”</div>
+              <div className="mt-4">
+                <LogoCarousel
+                  logos={[
+                    { name: "CDK", src: "/legacy/logo-cdk.png", badge: "DMS" },
+                    { name: "Dealertrack", src: "/legacy/logo-dealer-track.png", badge: "DMS" },
+                    { name: "AutoSoft", src: "/legacy/logo-autosoft.png", badge: "DMS" },
+                    { name: "Automate", src: "/legacy/logo-automate.png", badge: "DMS" },
+                    { name: "Elead One", src: "/legacy/logo-eleadOne.png", badge: "CRM" },
+                    { name: "DealerSocket", src: "/legacy/logo-dealersocket.png", badge: "CRM" },
+                    { name: "DealerMine", src: "/legacy/logo-dealermine.png", badge: "CRM" },
+                  ]}
+                  label="Tier 1"
+                  itemMinWidth={240}
+                  itemPaddingY={30}
+                  showBadges
+                />
+              </div>
+            </div>
+
+            <div>
+              <div className="text-sm font-semibold text-white">
+                Tier 2 — Closes the loop (behavior → outcomes → accelerators)
+              </div>
+              <div className="mt-4">
+                <LogoCarousel
+                  logos={[
+                    { name: "CarGurus", src: "/legacy/logo-cargurus.png", badge: "Other" },
+                    { name: "Adam", src: "/legacy/logo-adam.png", badge: "Other" },
+                    { name: "RYR", src: "/legacy/logo-ryr.png", badge: "Other" },
+                  ]}
+                  label="Tier 2"
+                  itemMinWidth={240}
+                  itemPaddingY={30}
+                  showBadges
+                />
+              </div>
+            </div>
           </div>
 
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
-            <div className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
-              <div className="text-sm font-semibold text-white">We Speak Car</div>
-              <p className="mt-3 text-sm leading-6 text-zinc-300">
-                Not only do we allow connections to the top dealership software platforms, but we also understand the systems and ensure the reporting is valid.
-              </p>
-            </div>
-            <div className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
-              <div className="text-sm font-semibold text-white">Roadmap includes many more integrations</div>
-              <p className="mt-3 text-sm leading-6 text-zinc-300">
-                We start with industry leading dealership software integrations. Over time our clients will guide us as we integrate more and more of the dealership software ecosystem.
-              </p>
-            </div>
-            <div className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
-              <div className="text-sm font-semibold text-white">
-                Unleash the power of AI to gain insights and powerful automations paired with dealership data
-              </div>
-              <p className="mt-3 text-sm leading-6 text-zinc-300">
-                Reduce the time spent with reporting and focus on solutions with an assist from Kai.
-              </p>
-            </div>
+          <div className="mt-10 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
+            <div className="text-sm font-semibold text-white">Bottom line</div>
+            <p className="mt-3 text-sm leading-6 text-zinc-300">
+              The core priority of MergeData is to increase the data funnel—which reduces the number of screens you need to manage.
+              Merge these systems into a unified platform so Kai can turn truth into daily priorities.
+            </p>
           </div>
         </div>
       </section>

@@ -11,9 +11,15 @@ export type Logo = {
 export function LogoCarousel({
   logos,
   label = "Integrations",
+  itemMinWidth = 200,
+  itemPaddingY = 28,
+  showBadges = false,
 }: {
-  logos: Logo[];
+  logos: (Logo & { badge?: string })[];
   label?: string;
+  itemMinWidth?: number;
+  itemPaddingY?: number;
+  showBadges?: boolean;
 }) {
   const scrollerRef = useRef<HTMLDivElement | null>(null);
 
@@ -62,22 +68,31 @@ export function LogoCarousel({
         {logos.map((x) => (
           <div
             key={x.name}
-            className="snap-start flex min-w-[160px] items-center justify-center rounded-2xl bg-white/5 px-6 py-6 ring-1 ring-white/10"
+            className="snap-start rounded-2xl bg-white/5 ring-1 ring-white/10"
+            style={{ minWidth: itemMinWidth }}
             title={x.name}
           >
-            <Image
-              src={x.src}
-              alt={x.name}
-              width={160}
-              height={48}
-              className="h-7 w-auto opacity-90"
-            />
+            <div
+              className="flex items-center justify-center px-6"
+              style={{ paddingTop: itemPaddingY, paddingBottom: itemPaddingY }}
+            >
+              <Image
+                src={x.src}
+                alt={x.name}
+                width={180}
+                height={56}
+                className="h-8 w-auto opacity-90"
+              />
+            </div>
+            {showBadges && x.badge ? (
+              <div className="px-4 pb-4">
+                <span className="inline-flex items-center rounded-full bg-black/30 px-3 py-1 text-[11px] font-medium text-zinc-200 ring-1 ring-white/10">
+                  {x.badge}
+                </span>
+              </div>
+            ) : null}
           </div>
         ))}
-      </div>
-
-      <div className="mt-3 text-xs text-zinc-400">
-        Reusing integration logos from the legacy site; we can expand/replace this list anytime.
       </div>
     </div>
   );
