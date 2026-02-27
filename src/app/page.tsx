@@ -3,6 +3,7 @@ import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { Footer } from "@/components/Footer";
 import { LogoCarousel } from "@/components/LogoCarousel";
+import { Reveal } from "@/components/Reveal";
 
 function Pill({ children }: { children: React.ReactNode }) {
   return (
@@ -34,7 +35,7 @@ export default function Home() {
           <div className="absolute bottom-[-240px] left-[-160px] h-[520px] w-[520px] rounded-full bg-cyan-500/10 blur-3xl" />
         </div>
 
-        <div className="mx-auto max-w-7xl px-3 pb-16 pt-8 sm:px-4 md:px-6 md:pb-24 md:pt-12">
+        <div className="mx-auto max-w-7xl px-3 pb-16 pt-6 sm:px-4 md:px-6 md:pb-24 md:pt-10">
           <div className="grid gap-10 md:grid-cols-2 md:items-center">
             <div>
               <div className="flex flex-wrap gap-2">
@@ -117,7 +118,8 @@ export default function Home() {
 
           <div className="mt-10 grid gap-6">
             {/* 01 */}
-            <div className="grid gap-6 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-center">
+            <Reveal from="left" delayMs={0}>
+              <div className="grid gap-6 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-center">
               <div>
                 <div className="text-sm font-semibold text-zinc-300">01.</div>
                 <div className="mt-2 text-2xl font-semibold text-white">Too many dashboards, not enough time</div>
@@ -137,9 +139,11 @@ export default function Home() {
                 <p className="mt-3 text-xs text-zinc-400">Dealer in an office staring at ~10 screens/dashboards.</p>
               </div>
             </div>
+            </Reveal>
 
             {/* 02 */}
-            <div className="grid gap-6 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-center">
+            <Reveal from="right" delayMs={50}>
+              <div className="grid gap-6 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-center">
               <div>
                 <div className="text-sm font-semibold text-zinc-300">02.</div>
                 <div className="mt-2 text-2xl font-semibold text-white">Merge your tech stack into a single unified platform</div>
@@ -161,9 +165,11 @@ export default function Home() {
                 />
               </div>
             </div>
+            </Reveal>
 
             {/* 03 */}
-            <div className="grid gap-6 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-center">
+            <Reveal from="left" delayMs={75}>
+              <div className="grid gap-6 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-center">
               <div>
                 <div className="text-sm font-semibold text-zinc-300">03.</div>
                 <div className="mt-2 text-2xl font-semibold text-white">
@@ -195,9 +201,11 @@ export default function Home() {
                 />
               </div>
             </div>
+            </Reveal>
 
             {/* 04 */}
-            <div className="grid gap-6 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-start">
+            <Reveal from="right" delayMs={100}>
+              <div className="grid gap-6 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-start">
               <div>
                 <div className="text-sm font-semibold text-zinc-300">04.</div>
                 <div className="mt-2 text-2xl font-semibold text-white">Unleash the bots</div>
@@ -219,6 +227,7 @@ export default function Home() {
                 </ul>
               </div>
             </div>
+            </Reveal>
           </div>
         </div>
       </section>
