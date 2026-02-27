@@ -1,14 +1,18 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function SiteNav() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#070A1A]/50 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2 font-semibold text-white">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 ring-1 ring-white/15">
-            <span className="text-sm">MD</span>
-          </span>
-          <span>MergeData.ai</span>
+        <Link href="/" className="flex items-center gap-3 font-semibold text-white">
+          <Image
+            src="/legacy/md-main-logo.svg"
+            alt="MergeData"
+            width={120}
+            height={24}
+            priority
+          />
         </Link>
 
         <nav className="hidden items-center gap-6 text-sm text-zinc-200 md:flex">

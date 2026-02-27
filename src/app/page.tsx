@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { Footer } from "@/components/Footer";
@@ -10,13 +11,7 @@ function Pill({ children }: { children: React.ReactNode }) {
   );
 }
 
-function Feature({
-  title,
-  desc,
-}: {
-  title: string;
-  desc: string;
-}) {
+function FeatureCard({ title, desc }: { title: string; desc: string }) {
   return (
     <div className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
       <div className="text-base font-semibold text-white">{title}</div>
@@ -27,92 +22,78 @@ function Feature({
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#050714]">
       <SiteNav />
 
-      {/* Hero */}
-      <section className="relative overflow-hidden">
+      {/* Hero (revamp: reuse mergedata.io look) */}
+      <section id="home" className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-fuchsia-500/20 blur-3xl" />
-          <div className="absolute top-32 right-[-120px] h-[420px] w-[420px] rounded-full bg-cyan-500/15 blur-3xl" />
+          <div className="absolute -top-48 left-1/2 h-[640px] w-[640px] -translate-x-1/2 rounded-full bg-indigo-500/20 blur-3xl" />
+          <div className="absolute top-20 right-[-160px] h-[520px] w-[520px] rounded-full bg-fuchsia-500/20 blur-3xl" />
+          <div className="absolute bottom-[-240px] left-[-160px] h-[520px] w-[520px] rounded-full bg-cyan-500/10 blur-3xl" />
         </div>
 
         <div className="mx-auto max-w-6xl px-4 pb-16 pt-14 md:pb-24 md:pt-20">
-          <div className="flex flex-col gap-10 md:flex-row md:items-center md:justify-between">
-            <div className="max-w-2xl">
+          <div className="grid gap-10 md:grid-cols-2 md:items-center">
+            <div>
               <div className="flex flex-wrap gap-2">
                 <Pill>Dealership Intelligence Accelerated.</Pill>
-                <Pill>One operational truth</Pill>
-                <Pill>Kai coordinates the work</Pill>
               </div>
 
               <h1 className="mt-6 text-4xl font-semibold tracking-tight text-white md:text-6xl">
-                Turn messy dealership data into
-                <span className="block text-zinc-200">daily priorities.</span>
+                One operational truth screen.
+                <span className="block text-zinc-200">Daily priorities powered by Kai.</span>
               </h1>
               <p className="mt-6 text-base leading-7 text-zinc-300 md:text-lg">
-                MergeData replaces fragmented reporting with one operational truth screen—and Kai turns it
-                into tasks, owner assignments, and executive summaries.
+                MergeData replaces fragmented dealership reporting with one operating intelligence platform—and Kai
+                turns it into tasks, owner assignments, and executive summaries.
               </p>
 
               <div id="demo" className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link
                   href="/contact"
-                  className="inline-flex h-11 items-center justify-center rounded-full bg-white px-5 text-sm font-semibold text-black hover:bg-zinc-200"
+                  className="inline-flex h-11 items-center justify-center rounded-full bg-indigo-500 px-5 text-sm font-semibold text-white hover:bg-indigo-400"
                 >
                   Request a demo
                 </Link>
                 <Link
-                  href="#features"
+                  href="#how"
                   className="inline-flex h-11 items-center justify-center rounded-full bg-white/5 px-5 text-sm font-semibold text-white ring-1 ring-white/15 hover:bg-white/10"
                 >
-                  See features
+                  How it works
                 </Link>
               </div>
 
               <div className="mt-6 text-xs text-zinc-400">
-                Works with your existing stack. No rip-and-replace.
+                Not another reporting tool — the operational system of record for dealership truth.
               </div>
             </div>
 
-            {/* Kai motion graphic placeholder */}
-            <div className="w-full max-w-xl">
-              <div className="rounded-3xl bg-gradient-to-b from-white/10 to-white/5 p-6 ring-1 ring-white/15">
+            {/* Visual: reuse legacy assets */}
+            <div className="relative">
+              <div className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
                 <div className="flex items-center justify-between">
-                  <div className="text-sm font-semibold text-white">Kai orchestration (motion)</div>
-                  <span className="rounded-full bg-amber-500/15 px-2 py-1 text-xs font-medium text-amber-200 ring-1 ring-amber-500/20">
-                    Placeholder
+                  <div className="text-sm font-semibold text-white">Kai (preview)</div>
+                  <span className="rounded-full bg-emerald-500/15 px-2 py-1 text-xs font-medium text-emerald-200 ring-1 ring-emerald-500/20">
+                    Looping
                   </span>
                 </div>
-
-                <div className="mt-4 rounded-2xl bg-black/30 p-4 ring-1 ring-white/10">
-                  <div className="text-xs font-semibold text-white">What goes here</div>
-                  <p className="mt-2 text-xs leading-5 text-zinc-300">
-                    A looping motion graphic: integrations stream in → Kai wakes → organizes tasks & mentions
-                    → operators wake and execute → outputs on the right → brief rest → loop.
-                  </p>
+                <div className="mt-4 overflow-hidden rounded-2xl ring-1 ring-white/10">
+                  <Image
+                    src="/legacy/login-ai-kai.gif"
+                    alt="Kai preview"
+                    width={960}
+                    height={600}
+                    className="h-auto w-full"
+                    unoptimized
+                  />
                 </div>
-
-                <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                  {[
-                    "Integrations (data in)",
-                    "Kai (center)",
-                    "Tasks / assignments",
-                    "Conversations / mentions",
-                    "Operators (team)",
-                    "Reports / exec summary",
-                  ].map((x) => (
-                    <div
-                      key={x}
-                      className="rounded-2xl bg-black/40 px-4 py-3 text-xs text-zinc-200 ring-1 ring-white/10"
-                    >
+                <div className="mt-4 grid grid-cols-3 gap-2 text-[11px] text-zinc-300">
+                  {["Detect", "Explain", "Prioritize", "Recommend", "Summarize", "Route work"].map((x) => (
+                    <div key={x} className="rounded-full bg-black/30 px-3 py-2 text-center ring-1 ring-white/10">
                       {x}
                     </div>
                   ))}
-                </div>
-
-                <div className="mt-4 text-xs text-zinc-400">
-                  Preferred implementation: Lottie JSON (so we can control sizing + loop on web).
                 </div>
               </div>
             </div>
@@ -266,26 +247,34 @@ export default function Home() {
 
           <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6">
             {[
-              "DMS",
-              "CRM",
-              "Call tracking",
-              "Website",
-              "Ads",
-              "Inventory",
-              "Service",
-              "Chat",
-              "Reviews",
-              "Payments",
-              "Spreadsheets",
-              "Custom API",
+              { name: "Adam", src: "/legacy/logo-adam.png" },
+              { name: "Automate", src: "/legacy/logo-automate.png" },
+              { name: "AutoSoft", src: "/legacy/logo-autosoft.png" },
+              { name: "CarGurus", src: "/legacy/logo-cargurus.png" },
+              { name: "CDK", src: "/legacy/logo-cdk.png" },
+              { name: "Dealertrack", src: "/legacy/logo-dealer-track.png" },
+              { name: "DealerMine", src: "/legacy/logo-dealermine.png" },
+              { name: "DealerSocket", src: "/legacy/logo-dealersocket.png" },
+              { name: "Elead One", src: "/legacy/logo-eleadOne.png" },
+              { name: "RYR", src: "/legacy/logo-ryr.png" },
             ].map((x) => (
               <div
-                key={x}
-                className="flex items-center justify-center rounded-2xl bg-white/5 px-4 py-6 text-xs font-medium text-zinc-200 ring-1 ring-white/10"
+                key={x.name}
+                className="flex items-center justify-center rounded-2xl bg-white/5 px-4 py-6 ring-1 ring-white/10"
+                title={x.name}
               >
-                {x}
+                <Image
+                  src={x.src}
+                  alt={x.name}
+                  width={140}
+                  height={40}
+                  className="h-7 w-auto opacity-90"
+                />
               </div>
             ))}
+          </div>
+          <div className="mt-6 text-xs text-zinc-400">
+            (Reusing integration logos from the legacy site; we can expand/replace this list anytime.)
           </div>
         </div>
       </section>
@@ -330,27 +319,27 @@ export default function Home() {
           </div>
 
           <div className="mt-10 grid gap-4 md:grid-cols-3">
-            <Feature
+            <FeatureCard
               title="Unified schema"
               desc="Normalize objects across systems (accounts, deals, subscriptions, invoices) so downstream models stay stable."
             />
-            <Feature
+            <FeatureCard
               title="Incremental syncs"
               desc="Fast refresh cycles with safe backfills. Tune freshness by source—without blowing up your warehouse bill."
             />
-            <Feature
+            <FeatureCard
               title="Quality checks"
               desc="Freshness, row counts, nulls, and key uniqueness checks so you catch issues before execs do."
             />
-            <Feature
+            <FeatureCard
               title="Lineage + docs"
               desc="Know where every field comes from. Ship a dataset that analysts can actually understand."
             />
-            <Feature
+            <FeatureCard
               title="Role-based access"
               desc="Keep sensitive fields controlled while still enabling broad self-serve analytics."
             />
-            <Feature
+            <FeatureCard
               title="Change management"
               desc="Detect schema drift and upstream changes. Avoid the ‘mystery dashboard broke’ fire drills."
             />
