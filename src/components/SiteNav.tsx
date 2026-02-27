@@ -4,7 +4,7 @@ import Link from "next/link";
 export function SiteNav() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#070A1A]/50 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-3 sm:px-4 md:px-6">
         <Link href="/" className="flex items-center gap-3 font-semibold text-white">
           <Image
             src="/legacy/md-main-logo.svg"

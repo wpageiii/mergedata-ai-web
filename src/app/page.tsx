@@ -34,14 +34,14 @@ export default function Home() {
           <div className="absolute bottom-[-240px] left-[-160px] h-[520px] w-[520px] rounded-full bg-cyan-500/10 blur-3xl" />
         </div>
 
-        <div className="mx-auto max-w-6xl px-4 pb-16 pt-14 md:pb-24 md:pt-20">
+        <div className="mx-auto max-w-7xl px-3 pb-16 pt-14 sm:px-4 md:px-6 md:pb-24 md:pt-20">
           <div className="grid gap-10 md:grid-cols-2 md:items-center">
             <div>
               <div className="flex flex-wrap gap-2">
                 <Pill>Dealership Intelligence Accelerated.</Pill>
               </div>
 
-              <h1 className="mt-6 text-4xl font-semibold tracking-tight text-white md:text-6xl">
+              <h1 className="mt-6 text-5xl font-bold tracking-tight text-white md:text-7xl">
                 One operational truth screen.
                 <span className="block text-zinc-200">Daily priorities powered by Kai.</span>
               </h1>
@@ -104,7 +104,7 @@ export default function Home() {
 
       {/* How it works (revamp: 01/02/03 cards style) */}
       <section id="how" className="bg-[#050714]">
-        <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-3 py-16 sm:px-4 md:px-6 md:py-24">
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400">How it works</p>
             <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white md:text-3xl">
@@ -225,7 +225,7 @@ export default function Home() {
 
       {/* Integrations (tiers) */}
       <section id="integrations" className="border-y border-white/10 bg-[#050714]">
-        <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-3 py-16 sm:px-4 md:px-6 md:py-24">
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400">Integrations</p>
             <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white md:text-3xl">
@@ -292,7 +292,7 @@ export default function Home() {
 
       {/* About (revamp: founder cards like legacy) */}
       <section id="about" className="bg-[#050714]">
-        <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-3 py-16 sm:px-4 md:px-6 md:py-24">
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400">About us</p>
             <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white md:text-3xl">
@@ -513,7 +513,7 @@ export default function Home() {
 
       {/* CTA */}
       <section className="border-t border-white/10 bg-black">
-        <div className="mx-auto max-w-6xl px-4 py-16">
+        <div className="mx-auto max-w-7xl px-3 py-16 sm:px-4 md:px-6">
           <div className="rounded-3xl bg-gradient-to-r from-white/10 to-white/5 p-8 ring-1 ring-white/15 md:p-12">
             <div className="max-w-2xl">
               <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
