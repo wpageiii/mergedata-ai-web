@@ -41,19 +41,18 @@ export default function Home() {
           <div className="flex flex-col gap-10 md:flex-row md:items-center md:justify-between">
             <div className="max-w-2xl">
               <div className="flex flex-wrap gap-2">
-                <Pill>New: MergeData.ai update</Pill>
-                <Pill>Warehouse-ready tables</Pill>
-                <Pill>Zero glue code</Pill>
+                <Pill>Dealership Intelligence Accelerated.</Pill>
+                <Pill>One operational truth</Pill>
+                <Pill>Kai coordinates the work</Pill>
               </div>
 
               <h1 className="mt-6 text-4xl font-semibold tracking-tight text-white md:text-6xl">
-                Your data pipeline,
-                <span className="block text-zinc-200">made boring again.</span>
+                Turn messy dealership data into
+                <span className="block text-zinc-200">daily priorities.</span>
               </h1>
               <p className="mt-6 text-base leading-7 text-zinc-300 md:text-lg">
-                MergeData.ai connects your sources, normalizes messy schemas, and delivers clean,
-                documented tables to your warehouse—so analysts can ship insights without waiting on
-                engineering.
+                MergeData replaces fragmented reporting with one operational truth screen—and Kai turns it
+                into tasks, owner assignments, and executive summaries.
               </p>
 
               <div id="demo" className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -76,38 +75,44 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right card */}
+            {/* Kai motion graphic placeholder */}
             <div className="w-full max-w-xl">
               <div className="rounded-3xl bg-gradient-to-b from-white/10 to-white/5 p-6 ring-1 ring-white/15">
                 <div className="flex items-center justify-between">
-                  <div className="text-sm font-semibold text-white">Pipeline overview</div>
-                  <span className="rounded-full bg-emerald-500/15 px-2 py-1 text-xs font-medium text-emerald-200 ring-1 ring-emerald-500/20">
-                    Live
+                  <div className="text-sm font-semibold text-white">Kai orchestration (motion)</div>
+                  <span className="rounded-full bg-amber-500/15 px-2 py-1 text-xs font-medium text-amber-200 ring-1 ring-amber-500/20">
+                    Placeholder
                   </span>
                 </div>
-                <div className="mt-4 space-y-3">
+
+                <div className="mt-4 rounded-2xl bg-black/30 p-4 ring-1 ring-white/10">
+                  <div className="text-xs font-semibold text-white">What goes here</div>
+                  <p className="mt-2 text-xs leading-5 text-zinc-300">
+                    A looping motion graphic: integrations stream in → Kai wakes → organizes tasks & mentions
+                    → operators wake and execute → outputs on the right → brief rest → loop.
+                  </p>
+                </div>
+
+                <div className="mt-4 grid gap-3 sm:grid-cols-2">
                   {[
-                    { k: "Sources", v: "HubSpot, Stripe, Salesforce, Postgres" },
-                    { k: "Transforms", v: "Schema normalization + dedupe + joins" },
-                    { k: "Destination", v: "Snowflake / BigQuery / Redshift" },
-                    { k: "Refresh", v: "5–15 min incremental" },
-                    { k: "Quality", v: "Freshness + volume + null checks" },
-                  ].map((row) => (
+                    "Integrations (data in)",
+                    "Kai (center)",
+                    "Tasks / assignments",
+                    "Conversations / mentions",
+                    "Operators (team)",
+                    "Reports / exec summary",
+                  ].map((x) => (
                     <div
-                      key={row.k}
-                      className="flex items-start justify-between gap-6 rounded-2xl bg-black/30 px-4 py-3 ring-1 ring-white/10"
+                      key={x}
+                      className="rounded-2xl bg-black/40 px-4 py-3 text-xs text-zinc-200 ring-1 ring-white/10"
                     >
-                      <div className="text-xs font-medium text-zinc-300">{row.k}</div>
-                      <div className="text-xs text-zinc-200 text-right">{row.v}</div>
+                      {x}
                     </div>
                   ))}
                 </div>
-                <div className="mt-5 rounded-2xl bg-black/40 p-4 ring-1 ring-white/10">
-                  <div className="text-xs font-semibold text-white">What analysts get</div>
-                  <p className="mt-2 text-xs leading-5 text-zinc-300">
-                    Clean tables with stable naming, documented columns, and consistent primary keys—ready
-                    for Looker, Mode, or your semantic layer.
-                  </p>
+
+                <div className="mt-4 text-xs text-zinc-400">
+                  Preferred implementation: Lottie JSON (so we can control sizing + loop on web).
                 </div>
               </div>
             </div>
@@ -115,31 +120,111 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Social proof */}
+      {/* Bottom tag / value */}
       <section className="border-y border-white/10 bg-black">
         <div className="mx-auto max-w-6xl px-4 py-10">
-          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-            <div className="text-sm text-zinc-300">
-              Built for teams that need reliable analytics, not another brittle integration.
+          <div className="text-sm leading-6 text-zinc-300">
+            MergeData replaces fragmented dealership reporting with one operational truth screen, and Kai
+            turns it into daily priorities, tasks, and executive summaries.
+          </div>
+        </div>
+      </section>
+
+      {/* How it works (placeholder until copy arrives) */}
+      <section id="how" className="bg-black">
+        <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
+          <div className="max-w-2xl">
+            <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+              How it works
+            </h2>
+            <p className="mt-3 text-sm leading-6 text-zinc-300">
+              Next up: we’ll plug in the full “How it Works” narrative and steps.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
+            <Feature
+              title="Connect your sources"
+              desc="Hook up your dealership systems and data feeds. (Integration list coming next.)"
+            />
+            <Feature
+              title="Kai organizes the work"
+              desc="Mentions, tasks, assignments, and summaries are generated and routed to the right owners."
+            />
+            <Feature
+              title="Operators execute"
+              desc="Operators resolve conversations and tasks, escalating only what needs attention."
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Integrations */}
+      <section id="integrations" className="border-y border-white/10 bg-black">
+        <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
+          <div className="max-w-2xl">
+            <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+              Integrations
+            </h2>
+            <p className="mt-3 text-sm leading-6 text-zinc-300">
+              Bring your existing stack. MergeData unifies signals into one operational view.
+            </p>
+          </div>
+
+          <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6">
+            {[
+              "DMS",
+              "CRM",
+              "Call tracking",
+              "Website",
+              "Ads",
+              "Inventory",
+              "Service",
+              "Chat",
+              "Reviews",
+              "Payments",
+              "Spreadsheets",
+              "Custom API",
+            ].map((x) => (
+              <div
+                key={x}
+                className="flex items-center justify-center rounded-2xl bg-white/5 px-4 py-6 text-xs font-medium text-zinc-200 ring-1 ring-white/10"
+              >
+                {x}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="bg-black">
+        <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
+          <div className="grid gap-10 md:grid-cols-2 md:items-center">
+            <div>
+              <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+                About us
+              </h2>
+              <p className="mt-3 text-sm leading-6 text-zinc-300">
+                MergeData helps dealership teams stop arguing about numbers and start running the business.
+                We unify data, surface what matters, and turn signals into action.
+              </p>
             </div>
-            <div className="grid grid-cols-2 gap-3 text-xs text-zinc-400 sm:grid-cols-4">
-              {[
-                "Revenue ops",
-                "Product analytics",
-                "Finance",
-                "Data teams",
-              ].map((x) => (
-                <div key={x} className="rounded-xl bg-white/5 px-3 py-2 ring-1 ring-white/10 text-center">
-                  {x}
-                </div>
-              ))}
+            <div className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
+              <div className="text-sm font-semibold text-white">What you should feel</div>
+              <ul className="mt-4 space-y-2 text-sm text-zinc-300">
+                <li>• One truth screen (not 12 dashboards)</li>
+                <li>• Clear daily priorities</li>
+                <li>• Owners assigned automatically</li>
+                <li>• Exec summaries on demand</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features */}
-      <section id="features" className="bg-black">
+      {/* CTA */}
+      <section className="border-t border-white/10 bg-black">
         <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
           <div className="max-w-2xl">
             <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
