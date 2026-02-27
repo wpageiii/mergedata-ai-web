@@ -42,7 +42,10 @@ export function Reveal({
 
   const base =
     "transition-all duration-700 ease-out will-change-transform will-change-opacity";
-  const hidden = from === "left" ? "opacity-0 -translate-x-32" : "opacity-0 translate-x-32";
+  const hidden =
+    from === "left"
+      ? "opacity-0 -translate-x-[32rem]"
+      : "opacity-0 translate-x-[32rem]";
   const visible = "opacity-100 translate-x-0";
 
   return (

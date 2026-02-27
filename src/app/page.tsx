@@ -119,7 +119,7 @@ export default function Home() {
           <div className="mt-10 grid gap-6">
             {/* 01 */}
             <Reveal from="left" delayMs={0}>
-              <div className="grid gap-6 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-center">
+              <div className="grid gap-6 rounded-3xl bg-white/5 p-6 ring-1 ring-white/15 md:grid-cols-2 md:items-center">
               <div>
                 <div className="text-sm font-semibold text-zinc-300">01.</div>
                 <div className="mt-2 text-2xl font-semibold text-white">Too many dashboards, not enough time</div>
@@ -143,7 +143,7 @@ export default function Home() {
 
             {/* 02 */}
             <Reveal from="right" delayMs={50}>
-              <div className="grid gap-6 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-center">
+              <div className="grid gap-6 rounded-3xl bg-black/30 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-center">
               <div>
                 <div className="text-sm font-semibold text-zinc-300">02.</div>
                 <div className="mt-2 text-2xl font-semibold text-white">Merge your tech stack into a single unified platform</div>
@@ -169,7 +169,7 @@ export default function Home() {
 
             {/* 03 */}
             <Reveal from="left" delayMs={75}>
-              <div className="grid gap-6 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-center">
+              <div className="grid gap-6 rounded-3xl bg-white/5 p-6 ring-1 ring-white/15 md:grid-cols-2 md:items-center">
               <div>
                 <div className="text-sm font-semibold text-zinc-300">03.</div>
                 <div className="mt-2 text-2xl font-semibold text-white">
@@ -205,7 +205,7 @@ export default function Home() {
 
             {/* 04 */}
             <Reveal from="right" delayMs={100}>
-              <div className="grid gap-6 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-start">
+              <div className="grid gap-6 rounded-3xl bg-black/30 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-start">
               <div>
                 <div className="text-sm font-semibold text-zinc-300">04.</div>
                 <div className="mt-2 text-2xl font-semibold text-white">Unleash the bots</div>
