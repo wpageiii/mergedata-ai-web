@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { Footer } from "@/components/Footer";
+import { LogoCarousel } from "@/components/LogoCarousel";
 
 function Pill({ children }: { children: React.ReactNode }) {
   return (
@@ -111,121 +112,120 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How it works */}
-      <section id="how" className="bg-black">
+      {/* How it works (revamp: 01/02/03 cards style) */}
+      <section id="how" className="bg-[#050714]">
         <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
           <div className="max-w-2xl">
-            <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
-              How it works
+            <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400">How it works</p>
+            <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white md:text-3xl">
+              Replace dashboards with an operating truth screen.
             </h2>
             <p className="mt-3 text-sm leading-6 text-zinc-300">
-              MergeData is built to replace fragmented reporting with an operational truth screen—then turn
-              that truth into daily action.
+              MergeData is built to unify your tech stack, prove the numbers, and turn changes into action.
             </p>
           </div>
 
-          <div className="mt-10 grid gap-4">
-            {/* Step 1 */}
-            <div className="grid gap-4 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-center">
+          <div className="mt-10 grid gap-6">
+            {/* 01 */}
+            <div className="grid gap-6 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-center">
               <div>
-                <div className="text-xs font-semibold text-zinc-300">01</div>
-                <div className="mt-2 text-xl font-semibold text-white">
-                  Too many dashboards, not enough time
-                </div>
-                <p className="mt-3 text-sm leading-6 text-zinc-300">
-                  We know it. Our previous company was called <span className="text-white">Dashboard</span>—one might say we had
-                  a part in creating this mess.
+                <div className="text-sm font-semibold text-zinc-300">01.</div>
+                <div className="mt-2 text-2xl font-semibold text-white">Too many dashboards, not enough time</div>
+                <p className="mt-4 text-sm leading-6 text-zinc-300">
+                  We know it. Our previous company was called <span className="text-white">Dashboard</span>—one might say we had a part in
+                  creating this mess.
                 </p>
-                <p className="mt-3 text-sm leading-6 text-zinc-300">
-                  Dealers do not need another dashboard tool.
-                </p>
+                <p className="mt-3 text-sm leading-6 text-zinc-300">Dealers do not need another dashboard tool.</p>
               </div>
-              <div className="rounded-2xl bg-black/30 p-6 ring-1 ring-white/10">
-                <div className="text-sm font-semibold text-white">Graphic placeholder</div>
-                <p className="mt-2 text-xs leading-5 text-zinc-300">
-                  Dealer in an office staring at ~10 screens/dashboards.
-                </p>
+              <div className="rounded-3xl bg-black/30 p-4 ring-1 ring-white/10">
+                <div className="text-xs font-semibold text-white">Graphic placeholder</div>
+                <div className="mt-3 grid grid-cols-3 gap-2">
+                  {Array.from({ length: 9 }).map((_, i) => (
+                    <div key={i} className="h-12 rounded-2xl bg-white/5 ring-1 ring-white/10" />
+                  ))}
+                </div>
+                <p className="mt-3 text-xs text-zinc-400">Dealer in an office staring at ~10 screens/dashboards.</p>
               </div>
             </div>
 
-            {/* Step 2 */}
-            <div className="grid gap-4 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-center">
+            {/* 02 */}
+            <div className="grid gap-6 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-center">
               <div>
-                <div className="text-xs font-semibold text-zinc-300">02</div>
-                <div className="mt-2 text-xl font-semibold text-white">
-                  Merge your tech stack into a single unified platform
-                </div>
-                <p className="mt-3 text-sm leading-6 text-zinc-300">
-                  MergeData is the dealership operating intelligence platform that unifies DMS, CRM, and other vendor
-                  systems into one trusted decision environment.
+                <div className="text-sm font-semibold text-zinc-300">02.</div>
+                <div className="mt-2 text-2xl font-semibold text-white">Merge your tech stack into a single unified platform</div>
+                <p className="mt-4 text-sm leading-6 text-zinc-300">
+                  MergeData is the dealership operating intelligence platform that unifies DMS, CRM, and other vendor systems into
+                  one trusted decision environment.
                 </p>
                 <p className="mt-3 text-sm leading-6 text-zinc-300">
                   MergeData is not “another reporting tool.” It is the operational system of record for dealership truth.
                 </p>
               </div>
-              <div className="rounded-2xl bg-black/30 p-6 ring-1 ring-white/10">
-                <div className="text-sm font-semibold text-white">Graphic placeholder</div>
-                <p className="mt-2 text-xs leading-5 text-zinc-300">
-                  All vendor data flows in → transformed → stored as a single repository/canonical model.
-                </p>
+              <div className="overflow-hidden rounded-3xl bg-black/30 ring-1 ring-white/10">
+                <Image
+                  src="/legacy/home-md.png"
+                  alt="MergeData platform preview"
+                  width={1200}
+                  height={760}
+                  className="h-auto w-full"
+                />
               </div>
             </div>
 
-            {/* Step 3 */}
-            <div className="grid gap-4 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-center">
+            {/* 03 */}
+            <div className="grid gap-6 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-center">
               <div>
-                <div className="text-xs font-semibold text-zinc-300">03</div>
-                <div className="mt-2 text-xl font-semibold text-white">
-                  Kai is an embedded AI performance operator inside MergeData
+                <div className="text-sm font-semibold text-zinc-300">03.</div>
+                <div className="mt-2 text-2xl font-semibold text-white">
+                  Kai is an embedded AI performance operator inside MergeData.
                 </div>
+                <p className="mt-4 text-sm leading-6 text-zinc-300">Kai is not a generic chatbot.</p>
                 <p className="mt-3 text-sm leading-6 text-zinc-300">
-                  Kai is not a generic chatbot.
-                </p>
-                <p className="mt-3 text-sm leading-6 text-zinc-300">
-                  Kai moves the dealership from “Here’s a report.” to “Here’s what changed, why it changed, and what actions
-                  to take today.”
+                  Kai moves the dealership from “Here’s a report.” to “Here’s what changed, why it changed, and what actions to take today.”
                 </p>
 
-                <div className="mt-6 rounded-2xl bg-black/30 p-5 ring-1 ring-white/10">
+                <div className="mt-6 rounded-3xl bg-black/30 p-5 ring-1 ring-white/10">
                   <div className="text-sm font-semibold text-white">The bulletproof 5</div>
-                  <ul className="mt-3 space-y-2 text-sm text-zinc-200">
-                    <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-400" />Detect — monitoring + anomaly/threshold detection</li>
-                    <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-400" />Explain — root-cause narratives tied to drillable data</li>
-                    <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-400" />Prioritize — role-based daily priorities (what matters today)</li>
-                    <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-400" />Recommend — next best actions / corrective steps</li>
-                    <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-400" />Summarize — executive summaries (daily/weekly), consistent format</li>
+                  <ul className="mt-4 space-y-2 text-sm text-zinc-200">
+                    <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-indigo-400" />Detect — monitoring + anomaly/threshold detection</li>
+                    <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-indigo-400" />Explain — root-cause narratives tied to drillable data</li>
+                    <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-indigo-400" />Prioritize — role-based daily priorities (what matters today)</li>
+                    <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-indigo-400" />Recommend — next best actions / corrective steps</li>
+                    <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-indigo-400" />Summarize — executive summaries (daily/weekly), consistent format</li>
                   </ul>
                 </div>
               </div>
-              <div className="rounded-2xl bg-black/30 p-6 ring-1 ring-white/10">
-                <div className="text-sm font-semibold text-white">Image placeholder</div>
-                <p className="mt-2 text-xs leading-5 text-zinc-300">
-                  Derived from main screen: Kai humble extension / embedded operator panel.
-                </p>
+              <div className="overflow-hidden rounded-3xl bg-black/30 ring-1 ring-white/10">
+                <Image
+                  src="/legacy/predictive-ai.png"
+                  alt="Kai embedded operator preview"
+                  width={1200}
+                  height={760}
+                  className="h-auto w-full"
+                />
               </div>
             </div>
 
-            {/* Step 4 */}
-            <div className="grid gap-4 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-start">
+            {/* 04 */}
+            <div className="grid gap-6 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-start">
               <div>
-                <div className="text-xs font-semibold text-zinc-300">04</div>
-                <div className="mt-2 text-xl font-semibold text-white">Unleash the bots</div>
-                <p className="mt-3 text-sm leading-6 text-zinc-300">
-                  After MergeData + Kai are proven at scale, we layer purpose-built expert agents that operate specific
-                  dealership workflows.
+                <div className="text-sm font-semibold text-zinc-300">04.</div>
+                <div className="mt-2 text-2xl font-semibold text-white">Unleash the bots</div>
+                <p className="mt-4 text-sm leading-6 text-zinc-300">
+                  After MergeData + Kai are proven at scale, we layer purpose-built expert agents that operate specific dealership workflows.
                 </p>
                 <p className="mt-3 text-sm leading-6 text-zinc-300">
                   These are not chatbots; they are department operators with measurable KPIs.
                 </p>
               </div>
-              <div className="rounded-2xl bg-black/30 p-6 ring-1 ring-white/10">
+              <div className="rounded-3xl bg-black/30 p-6 ring-1 ring-white/10">
                 <div className="text-sm font-semibold text-white">Roadmap examples</div>
                 <ul className="mt-4 space-y-2 text-sm text-zinc-200">
-                  <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-400" />MD Titling Agent — reduces funding friction + title backlog + compliance risk</li>
-                  <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-400" />MD Parts Ordering Agent — optimizes parts ordering workflow (including DMS writeback where allowed)</li>
-                  <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-400" />MD Inventory Acquisition Agent — improves buy discipline, turn, and margin protection</li>
-                  <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-400" />MD Recon Expert Agent — reduces recon days, cost variance, and frontline readiness delays</li>
-                  <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-400" />MD Payment Plan Agent — optimizes sales spiffs/incentives for behavior + margin efficiency</li>
+                  <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-fuchsia-400" />MD Titling Agent — reduces funding friction + title backlog + compliance risk</li>
+                  <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-fuchsia-400" />MD Parts Ordering Agent — optimizes parts ordering workflow (including DMS writeback where allowed)</li>
+                  <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-fuchsia-400" />MD Inventory Acquisition Agent — improves buy discipline, turn, and margin protection</li>
+                  <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-fuchsia-400" />MD Recon Expert Agent — reduces recon days, cost variance, and frontline readiness delays</li>
+                  <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-fuchsia-400" />MD Payment Plan Agent — optimizes sales spiffs/incentives for behavior + margin efficiency</li>
                 </ul>
               </div>
             </div>
@@ -233,74 +233,141 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Integrations */}
-      <section id="integrations" className="border-y border-white/10 bg-black">
+      {/* Integrations (revamp: carousel) */}
+      <section id="integrations" className="border-y border-white/10 bg-[#050714]">
         <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
           <div className="max-w-2xl">
-            <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
-              Integrations
+            <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400">Integrations</p>
+            <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white md:text-3xl">
+              Seamless integrations for automotive dealerships
             </h2>
             <p className="mt-3 text-sm leading-6 text-zinc-300">
-              Bring your existing stack. MergeData unifies signals into one operational view.
+              MergeData allows you to extract data & insights related to DMS providers, CRM, and other websites.
             </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6">
-            {[
-              { name: "Adam", src: "/legacy/logo-adam.png" },
-              { name: "Automate", src: "/legacy/logo-automate.png" },
-              { name: "AutoSoft", src: "/legacy/logo-autosoft.png" },
-              { name: "CarGurus", src: "/legacy/logo-cargurus.png" },
-              { name: "CDK", src: "/legacy/logo-cdk.png" },
-              { name: "Dealertrack", src: "/legacy/logo-dealer-track.png" },
-              { name: "DealerMine", src: "/legacy/logo-dealermine.png" },
-              { name: "DealerSocket", src: "/legacy/logo-dealersocket.png" },
-              { name: "Elead One", src: "/legacy/logo-eleadOne.png" },
-              { name: "RYR", src: "/legacy/logo-ryr.png" },
-            ].map((x) => (
-              <div
-                key={x.name}
-                className="flex items-center justify-center rounded-2xl bg-white/5 px-4 py-6 ring-1 ring-white/10"
-                title={x.name}
-              >
-                <Image
-                  src={x.src}
-                  alt={x.name}
-                  width={140}
-                  height={40}
-                  className="h-7 w-auto opacity-90"
-                />
-              </div>
-            ))}
+          <div className="mt-10">
+            <LogoCarousel
+              logos={[
+                { name: "Adam", src: "/legacy/logo-adam.png" },
+                { name: "Automate", src: "/legacy/logo-automate.png" },
+                { name: "AutoSoft", src: "/legacy/logo-autosoft.png" },
+                { name: "CarGurus", src: "/legacy/logo-cargurus.png" },
+                { name: "CDK", src: "/legacy/logo-cdk.png" },
+                { name: "Dealertrack", src: "/legacy/logo-dealer-track.png" },
+                { name: "DealerMine", src: "/legacy/logo-dealermine.png" },
+                { name: "DealerSocket", src: "/legacy/logo-dealersocket.png" },
+                { name: "Elead One", src: "/legacy/logo-eleadOne.png" },
+                { name: "RYR", src: "/legacy/logo-ryr.png" },
+              ]}
+              label="1 / 10"
+            />
           </div>
-          <div className="mt-6 text-xs text-zinc-400">
-            (Reusing integration logos from the legacy site; we can expand/replace this list anytime.)
+
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
+            <div className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
+              <div className="text-sm font-semibold text-white">We Speak Car</div>
+              <p className="mt-3 text-sm leading-6 text-zinc-300">
+                Not only do we allow connections to the top dealership software platforms, but we also understand the systems and ensure the reporting is valid.
+              </p>
+            </div>
+            <div className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
+              <div className="text-sm font-semibold text-white">Roadmap includes many more integrations</div>
+              <p className="mt-3 text-sm leading-6 text-zinc-300">
+                We start with industry leading dealership software integrations. Over time our clients will guide us as we integrate more and more of the dealership software ecosystem.
+              </p>
+            </div>
+            <div className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
+              <div className="text-sm font-semibold text-white">
+                Unleash the power of AI to gain insights and powerful automations paired with dealership data
+              </div>
+              <p className="mt-3 text-sm leading-6 text-zinc-300">
+                Reduce the time spent with reporting and focus on solutions with an assist from Kai.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* About */}
-      <section id="about" className="bg-black">
+      {/* About (revamp: founder cards like legacy) */}
+      <section id="about" className="bg-[#050714]">
         <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
-          <div className="grid gap-10 md:grid-cols-2 md:items-center">
-            <div>
-              <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
-                About us
-              </h2>
-              <p className="mt-3 text-sm leading-6 text-zinc-300">
-                MergeData helps dealership teams stop arguing about numbers and start running the business.
-                We unify data, surface what matters, and turn signals into action.
+          <div className="max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400">About us</p>
+            <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white md:text-3xl">
+              Focused today on what dealerships need in the future.
+            </h2>
+            <p className="mt-3 text-sm leading-6 text-zinc-300">
+              MergeData was born from experienced dealership software executives who struggled to make sense of the modern data landscape in the auto industry.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <a
+              href="https://www.linkedin.com/in/josh-blick-07a21ba"
+              target="_blank"
+              rel="noreferrer"
+              className="group rounded-3xl bg-white/5 p-7 ring-1 ring-white/10 hover:bg-white/[0.06]"
+            >
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex items-center gap-4">
+                  <Image
+                    src="/legacy/josh.png"
+                    alt="Josh Blick"
+                    width={64}
+                    height={64}
+                    className="h-16 w-16 rounded-full ring-1 ring-white/10"
+                  />
+                  <div>
+                    <div className="text-base font-semibold text-white">Josh Blick</div>
+                    <div className="mt-1 text-sm text-zinc-300">Co-Founder</div>
+                  </div>
+                </div>
+                <Image
+                  src="/legacy/linkedin.png"
+                  alt="LinkedIn"
+                  width={22}
+                  height={22}
+                  className="opacity-80 group-hover:opacity-100"
+                />
+              </div>
+              <p className="mt-6 text-sm leading-6 text-zinc-300">
+                Specialties: Dealership Software Solutions, Exception Based Reporting, Artificial Intelligence Systems, Automotive Dealership, Machine Learning, Business Intelligence, M&A
               </p>
-            </div>
-            <div className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
-              <div className="text-sm font-semibold text-white">What you should feel</div>
-              <ul className="mt-4 space-y-2 text-sm text-zinc-300">
-                <li>• One truth screen (not 12 dashboards)</li>
-                <li>• Clear daily priorities</li>
-                <li>• Owners assigned automatically</li>
-                <li>• Exec summaries on demand</li>
-              </ul>
-            </div>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/willpageiii"
+              target="_blank"
+              rel="noreferrer"
+              className="group rounded-3xl bg-white/5 p-7 ring-1 ring-white/10 hover:bg-white/[0.06]"
+            >
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex items-center gap-4">
+                  <Image
+                    src="/legacy/william.png"
+                    alt="William Page III"
+                    width={64}
+                    height={64}
+                    className="h-16 w-16 rounded-full ring-1 ring-white/10"
+                  />
+                  <div>
+                    <div className="text-base font-semibold text-white">William Page III</div>
+                    <div className="mt-1 text-sm text-zinc-300">Co-Founder</div>
+                  </div>
+                </div>
+                <Image
+                  src="/legacy/linkedin.png"
+                  alt="LinkedIn"
+                  width={22}
+                  height={22}
+                  className="opacity-80 group-hover:opacity-100"
+                />
+              </div>
+              <p className="mt-6 text-sm leading-6 text-zinc-300">
+                Highly skilled and experienced professional with a strong background in business development and project management. Proven track record of identifying and capitalizing on new business opportunities.
+              </p>
+            </a>
           </div>
         </div>
       </section>
