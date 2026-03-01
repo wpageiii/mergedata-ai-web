@@ -85,7 +85,7 @@ export default function PricingPage() {
           <Plan
             name="Standard"
             price="$995 / month"
-            desc="Merge Data API + standard connections with a dedicated Customer Success agent."
+            desc="$995 / month · $1,990 install (one-time). Merge Data API + standard connections with a dedicated Customer Success agent."
             bullets={[
               "Standard connections for DMS, CRM & Website",
               "Dedicated Merge Data Customer Success agent (install, training, maintenance)",
