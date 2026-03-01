@@ -29,7 +29,7 @@ function Plan({
   return (
     <div
       className={
-        "rounded-3xl p-7 ring-1 " +
+        "rounded-3xl p-7 ring-1 flex h-full flex-col " +
         (highlight
           ? "bg-white/10 ring-white/20"
           : "bg-white/5 ring-white/10")
@@ -59,7 +59,7 @@ function Plan({
       <Link
         href={href}
         className={
-          "mt-7 inline-flex h-11 w-full items-center justify-center rounded-full px-5 text-sm font-semibold " +
+          "mt-7 mt-auto inline-flex h-11 w-full items-center justify-center rounded-full px-5 text-sm font-semibold " +
           (highlight
             ? "bg-white text-black hover:bg-zinc-200"
             : "bg-white/5 text-white ring-1 ring-white/15 hover:bg-white/10")
@@ -91,7 +91,7 @@ export default function PricingPage() {
             desc="Merge Data API + standard connections with a dedicated Customer Success agent."
             bullets={[
               "Standard connections for DMS, CRM & Website",
-              "Dedicated Merge Data Customer Success agent (install, training, maintenance)",
+              "Includes installation, initial training sessions and daily monitoring for reporting accuracy.",
               "No terms — cancel anytime",
             ]}
             cta="Request a demo"
@@ -101,7 +101,7 @@ export default function PricingPage() {
           <Plan
             name="Enterprise"
             price="25 stores +"
-            desc="For groups that need scale, governance, and custom integrations."
+            desc="We understand that larger dealership groups have unique needs with their integrations, reporting and ai installations, therefore we consider these implications unique and flexible, let's chat more about it."
             bullets={[
               "Multi-store rollouts + centralized visibility",
               "Custom integrations and SLAs",
