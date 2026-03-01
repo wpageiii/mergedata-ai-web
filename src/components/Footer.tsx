@@ -28,7 +28,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#security" className="hover:text-white">
+                <Link href="/security" className="hover:text-white">
                   Security
                 </Link>
               </li>

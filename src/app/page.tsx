@@ -379,6 +379,37 @@ export default function Home() {
               </p>
             </a>
           </div>
+
+          {/* Security & Privacy (concise) */}
+          <div id="security" className="mt-10 rounded-3xl bg-black/30 p-7 ring-1 ring-white/10">
+            <div className="flex items-start justify-between gap-6">
+              <div>
+                <div className="text-sm font-semibold text-white">Security & privacy</div>
+                <p className="mt-2 text-sm leading-6 text-zinc-300">
+                  Security is part of the product—not an afterthought. Here’s how we approach it.
+                </p>
+              </div>
+              <Link
+                href="/security"
+                className="shrink-0 rounded-full bg-emerald-400 px-4 py-2 text-sm font-semibold text-black hover:bg-emerald-300"
+              >
+                View security
+              </Link>
+            </div>
+
+            <ul className="mt-6 grid gap-3 text-sm text-zinc-200 md:grid-cols-2">
+              <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-400" />Least-privilege access and role-based permissions.</li>
+              <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-400" />Encrypted data in transit; hardened infrastructure patterns.</li>
+              <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-400" />Access limited to authorized personnel; operational auditability.</li>
+              <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-400" />Data minimization and controlled retention.</li>
+              <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-400" />Customer data is used to operate your account—not to train public models.</li>
+              <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-400" />Happy to support security questionnaires during evaluation.</li>
+            </ul>
+
+            <div className="mt-4 text-xs text-zinc-400">
+              Note: We are not SOC 2 certified today; we can walk you through our standards and controls.
+            </div>
+          </div>
         </div>
       </section>
 
