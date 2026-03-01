@@ -73,9 +73,10 @@ function Plan({
 
 export default function PricingPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-gradient-to-b from-[#070A1A] via-black to-black text-white">
       <SiteNav />
-      <main className="mx-auto max-w-6xl px-4 py-10 md:py-14">
+      <main className="relative mx-auto max-w-6xl px-4 py-10 md:py-14">
+        <div className="pointer-events-none absolute -top-24 left-1/2 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-emerald-500/10 blur-3xl" />
         <h1 className="text-3xl font-semibold tracking-tight md:text-5xl">
           Pricing that scales with your data.
         </h1>

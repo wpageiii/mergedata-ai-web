@@ -32,20 +32,27 @@ export function SiteNav() {
         </nav>
 
         <div className="flex items-center gap-2">
+          {/* View Pricing (dark button) */}
           <Link
             href="/pricing"
-            className="hidden rounded-full px-4 py-2 text-sm font-medium text-white ring-1 ring-white/20 hover:bg-white/5 md:inline-flex"
+            className="hidden rounded-full bg-black/30 px-4 py-2 text-sm font-semibold text-white ring-1 ring-white/15 hover:bg-black/40 md:inline-flex"
           >
-            Pricing
+            View Pricing
           </Link>
-          <Link
-            href="/signin"
-            className="hidden rounded-full px-4 py-2 text-sm font-medium text-white ring-1 ring-white/20 hover:bg-white/5 md:inline-flex"
+
+          {/* Log in (white button) */}
+          <a
+            href="https://go.mergedata.io"
+            target="_blank"
+            rel="noreferrer"
+            className="hidden rounded-full bg-white px-4 py-2 text-sm font-semibold text-black hover:bg-zinc-200 md:inline-flex"
           >
-            Sign In
-          </Link>
+            Log in
+          </a>
+
+          {/* Request demo (accent button) */}
           <div className="inline-flex">
-            <DemoRequestButton />
+            <DemoRequestButton variant="accent" />
           </div>
         </div>
       </div>

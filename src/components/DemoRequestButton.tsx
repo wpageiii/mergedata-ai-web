@@ -14,7 +14,11 @@ function validateEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
 }
 
-export function DemoRequestButton() {
+export function DemoRequestButton({
+  variant = "default",
+}: {
+  variant?: "default" | "accent";
+}) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
@@ -68,7 +72,11 @@ export function DemoRequestButton() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="inline-flex rounded-full bg-white px-4 py-2 text-sm font-semibold text-black hover:bg-zinc-200"
+        className={
+          variant === "accent"
+            ? "inline-flex rounded-full bg-emerald-400 px-4 py-2 text-sm font-semibold text-black hover:bg-emerald-300"
+            : "inline-flex rounded-full bg-white px-4 py-2 text-sm font-semibold text-black hover:bg-zinc-200"
+        }
       >
         Request a demo
       </button>
