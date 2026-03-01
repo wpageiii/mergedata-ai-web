@@ -110,15 +110,7 @@ export default function PricingPage() {
           />
         </div>
 
-        <div className="mt-14 grid gap-4 md:grid-cols-2">
-          <div className="rounded-3xl bg-white/5 p-8 ring-1 ring-white/10">
-            <div className="text-sm font-semibold text-white">Installation</div>
-            <div className="mt-3 text-2xl font-bold text-white">$1,990 one-time</div>
-            <p className="mt-3 text-sm leading-6 text-zinc-300">
-              Installation fees are split into two payments.
-            </p>
-          </div>
-
+        <div className="mt-14">
           <div className="rounded-3xl bg-white/5 p-8 ring-1 ring-white/10">
             <div className="text-sm font-semibold text-white">AI token credits</div>
             <p className="mt-3 text-sm leading-6 text-zinc-300">
