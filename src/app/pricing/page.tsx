@@ -96,7 +96,6 @@ export default function PricingPage() {
               "Standard connections for DMS, CRM & Website",
               "Dedicated Merge Data Customer Success agent (install, training, maintenance)",
               "No terms — cancel anytime",
-              "$50 in AI token credits included (add more as needed)",
             ]}
             cta="Request a demo"
             href="/contact"
