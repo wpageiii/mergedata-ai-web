@@ -68,15 +68,14 @@ export function DemoRequestButton() {
       </button>
 
       {open ? (
-        <div className="fixed inset-0 z-[60]">
+        <div className="fixed inset-0 z-[60] flex overflow-y-auto p-4 items-start justify-center sm:items-center">
           <div
             className="absolute inset-0 bg-black/70"
             onClick={resetAndClose}
             aria-hidden="true"
           />
 
-          <div className="absolute inset-0 flex items-center justify-center p-4">
-            <div className="w-full max-w-lg rounded-3xl bg-[#0B1026] p-6 text-white ring-1 ring-white/15">
+          <div className="relative w-full max-w-lg rounded-3xl bg-[#0B1026] p-6 text-white ring-1 ring-white/15 max-h-[calc(100svh-2rem)] overflow-auto">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <div className="text-lg font-semibold">Request a demo</div>
@@ -184,7 +183,6 @@ export function DemoRequestButton() {
                   </div>
                 </form>
               )}
-            </div>
           </div>
         </div>
       ) : null}
