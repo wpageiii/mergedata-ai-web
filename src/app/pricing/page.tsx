@@ -113,7 +113,7 @@ export default function PricingPage() {
             bullets={[
               "Multi-store rollouts + centralized visibility",
               "Custom integrations and SLAs",
-              "Security + access controls",
+              "No terms — cancel anytime",
             ]}
             cta="Contact us"
             href="/contact"
