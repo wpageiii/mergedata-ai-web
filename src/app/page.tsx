@@ -305,10 +305,10 @@ export default function Home() {
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400">About us</p>
             <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white md:text-3xl">
-              Focused today on what dealerships need in the future.
+              Built by dealership operators who’ve scaled this before.
             </h2>
             <p className="mt-3 text-sm leading-6 text-zinc-300">
-              MergeData was born from experienced dealership software executives who struggled to make sense of the modern data landscape in the auto industry.
+              It’s not our first rodeo. Our founders helped pioneer dealership reporting and analytics—then came back to rebuild it for an AI-first era.
             </p>
           </div>
 
@@ -342,7 +342,7 @@ export default function Home() {
                 />
               </div>
               <p className="mt-6 text-sm leading-6 text-zinc-300">
-                Specialties: Dealership Software Solutions, Exception Based Reporting, Artificial Intelligence Systems, Automotive Dealership, Machine Learning, Business Intelligence, M&A
+                Dealer-focused software leader. Built and scaled analytics products used by operators to run the store day-to-day.
               </p>
             </a>
 
@@ -375,9 +375,54 @@ export default function Home() {
                 />
               </div>
               <p className="mt-6 text-sm leading-6 text-zinc-300">
-                Highly skilled and experienced professional with a strong background in business development and project management. Proven track record of identifying and capitalizing on new business opportunities.
+                Builder and operator. Focused on making dealership data reliable, actionable, and fast enough for daily decisions.
               </p>
             </a>
+          </div>
+
+          {/* Proof points + POV */}
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <div className="rounded-3xl bg-black/30 p-7 ring-1 ring-white/10">
+              <div className="text-xs font-semibold uppercase tracking-wider text-zinc-400">Credibility</div>
+              <div className="mt-3 text-base font-semibold text-white">Executive Eye (2009–2018)</div>
+              <p className="mt-3 text-sm leading-6 text-zinc-300">
+                Our previous product scaled to <span className="text-white">~1,000 rooftops</span> and was acquired by
+                <span className="text-white"> CDK Global</span>. We’ve lived dealership operations and we know what breaks when numbers can’t be trusted.
+              </p>
+            </div>
+
+            <div className="rounded-3xl bg-black/30 p-7 ring-1 ring-white/10">
+              <div className="text-xs font-semibold uppercase tracking-wider text-zinc-400">Why now</div>
+              <div className="mt-3 text-base font-semibold text-white">AI changed the bar</div>
+              <p className="mt-3 text-sm leading-6 text-zinc-300">
+                After our non-compete, we saw a gap forming: legacy tools weren’t built to leverage AI reliably.
+                Dealers needed a platform designed for the next decade—not the last.
+              </p>
+            </div>
+
+            <div className="rounded-3xl bg-black/30 p-7 ring-1 ring-white/10">
+              <div className="text-xs font-semibold uppercase tracking-wider text-zinc-400">What’s different</div>
+              <div className="mt-3 text-base font-semibold text-white">Truth → priorities → automation</div>
+              <p className="mt-3 text-sm leading-6 text-zinc-300">
+                We unify DMS, CRM, and vendor systems into a single truth layer—then Kai turns that truth into
+                daily priorities and workflow automation (&ldquo;unleash the bots&rdquo;).
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            <div className="rounded-3xl bg-white/5 p-7 ring-1 ring-white/10">
+              <div className="text-sm font-semibold text-white">Josh Blick</div>
+              <p className="mt-3 text-sm leading-6 text-zinc-300">
+                “Dealers don’t need more dashboards. They need a daily operating system that tells each leader what changed, why it matters, and what to do next.”
+              </p>
+            </div>
+            <div className="rounded-3xl bg-white/5 p-7 ring-1 ring-white/10">
+              <div className="text-sm font-semibold text-white">William Page III</div>
+              <p className="mt-3 text-sm leading-6 text-zinc-300">
+                “Our goal is to close the gap between reporting and action—so operators spend less time on manual work and more time solving the complex issues that move the store.”
+              </p>
+            </div>
           </div>
 
           {/* Security & Privacy (concise) */}
