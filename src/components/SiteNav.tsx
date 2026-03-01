@@ -17,16 +17,16 @@ export function SiteNav() {
         </Link>
 
         <nav className="hidden items-center gap-6 text-sm text-zinc-200 md:flex">
-          <Link href="#home" className="hover:text-white">
+          <Link href="/#home" className="hover:text-white">
             Home
           </Link>
-          <Link href="#how" className="hover:text-white">
+          <Link href="/#how" className="hover:text-white">
             How it Works
           </Link>
-          <Link href="#integrations" className="hover:text-white">
+          <Link href="/#integrations" className="hover:text-white">
             Integrations
           </Link>
-          <Link href="#about" className="hover:text-white">
+          <Link href="/#about" className="hover:text-white">
             About Us
           </Link>
         </nav>
