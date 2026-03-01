@@ -54,7 +54,7 @@ function Plan({
         <div className="mt-2 text-3xl font-semibold text-white">{price2}</div>
       ) : null}
       <div className="mt-2 text-sm text-zinc-300">{desc}</div>
-      <ul className="mt-6 space-y-2 text-sm text-zinc-200">
+      <ul className="mt-6 space-y-2 text-sm text-zinc-200 mb-10">
         {bullets.map((b) => (
           <li key={b} className="flex gap-3">
             <span className="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-400" />
@@ -65,7 +65,7 @@ function Plan({
       <Link
         href={href}
         className={
-          "mt-10 mt-auto inline-flex h-11 w-full items-center justify-center rounded-full px-5 text-sm font-semibold " +
+          "mt-auto inline-flex h-11 w-full items-center justify-center rounded-full px-5 text-sm font-semibold " +
           (highlight
             ? "bg-white text-black hover:bg-zinc-200"
             : "bg-white/5 text-white ring-1 ring-white/15 hover:bg-white/10")
@@ -121,7 +121,8 @@ export default function PricingPage() {
         </div>
 
         <div className="mt-11">
-          <div className="rounded-3xl bg-white/5 p-8 ring-1 ring-white/10">
+          <div className="relative overflow-hidden rounded-3xl bg-white/5 p-8 ring-1 ring-emerald-400/20">
+            <div className="pointer-events-none absolute -top-16 right-0 h-64 w-64 rounded-full bg-emerald-500/10 blur-3xl" />
             <div className="text-sm font-semibold text-white">AI token credits</div>
             <p className="mt-3 text-sm leading-6 text-zinc-300">
               Standard includes up to <span className="font-semibold text-white">$50</span> in token credits.
