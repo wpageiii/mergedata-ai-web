@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { DemoRequestButton } from "@/components/DemoRequestButton";
 
 export function SiteNav() {
   return (
@@ -32,10 +33,10 @@ export function SiteNav() {
 
         <div className="flex items-center gap-2">
           <Link
-            href="/signup"
+            href="/pricing"
             className="hidden rounded-full px-4 py-2 text-sm font-medium text-white ring-1 ring-white/20 hover:bg-white/5 md:inline-flex"
           >
-            Sign Up
+            Pricing
           </Link>
           <Link
             href="/signin"
@@ -43,12 +44,9 @@ export function SiteNav() {
           >
             Sign In
           </Link>
-          <Link
-            href="#demo"
-            className="inline-flex rounded-full bg-white px-4 py-2 text-sm font-semibold text-black hover:bg-zinc-200"
-          >
-            Request a demo
-          </Link>
+          <div className="inline-flex">
+            <DemoRequestButton />
+          </div>
         </div>
       </div>
     </header>
