@@ -75,12 +75,12 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen bg-black text-white">
       <SiteNav />
-      <main className="mx-auto max-w-6xl px-4 py-14 md:py-20">
+      <main className="mx-auto max-w-6xl px-4 py-10 md:py-14">
         <h1 className="text-3xl font-semibold tracking-tight md:text-5xl">
           Pricing that scales with your data.
         </h1>
         <p className="mt-4 max-w-2xl text-sm leading-6 text-zinc-300 md:text-base">
-          Start with what you need today—add sources, environments, and SLAs as you grow.
+          Start with what you need today—our installation process typically runs in about 30 days.
         </p>
 
         <div className="mt-10 grid gap-4 md:grid-cols-2">
@@ -91,7 +91,7 @@ export default function PricingPage() {
             desc="Merge Data API + standard connections with a dedicated Customer Success agent."
             bullets={[
               "Standard connections for DMS, CRM & Website",
-              "Includes installation, initial training sessions and daily monitoring for reporting accuracy.",
+              "Includes installation, training sessions and daily monitoring for accuracy.",
               "No terms — cancel anytime",
             ]}
             cta="Request a demo"
