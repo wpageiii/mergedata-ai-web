@@ -101,7 +101,7 @@ export default function PricingPage() {
           <Plan
             name="Enterprise"
             price="25 stores +"
-            desc="We understand that larger dealership groups have unique needs with their integrations, reporting and ai installations, therefore we consider these implications unique and flexible, let's chat more about it."
+            desc="Larger dealership groups tend to have unique requirements for integrations, reporting, and AI workflows. We treat these implementations as flexible and tailored—let’s talk through what you need."
             bullets={[
               "Multi-store rollouts + centralized visibility",
               "Custom integrations and SLAs",
