@@ -20,14 +20,14 @@ export function SiteNav() {
           <Link href="/#home" className="hover:text-white">
             Home
           </Link>
+          <Link href="/#about" className="hover:text-white">
+            About Us
+          </Link>
           <Link href="/#how" className="hover:text-white">
             How it Works
           </Link>
           <Link href="/#integrations" className="hover:text-white">
             Integrations
-          </Link>
-          <Link href="/#about" className="hover:text-white">
-            About Us
           </Link>
         </nav>
 

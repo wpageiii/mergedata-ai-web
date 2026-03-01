@@ -144,8 +144,13 @@ export default function Home() {
                   className="opacity-80 group-hover:opacity-100"
                 />
               </div>
-              <p className="mt-6 text-sm leading-6 text-zinc-300">
-                Dealer-focused software leader. Built and scaled analytics products used by operators to run the store day-to-day.
+              <div className="mt-4">
+                <span className="inline-flex items-center rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-200 ring-1 ring-emerald-500/20">
+                  Sales / Ops
+                </span>
+              </div>
+              <p className="mt-5 text-sm leading-6 text-zinc-300">
+                “Dealers don’t need more dashboards. They need a daily operating system that tells each leader what changed, why it matters, and what to do next.”
               </p>
             </a>
 
@@ -177,8 +182,13 @@ export default function Home() {
                   className="opacity-80 group-hover:opacity-100"
                 />
               </div>
-              <p className="mt-6 text-sm leading-6 text-zinc-300">
-                Builder and operator. Focused on making dealership data reliable, actionable, and fast enough for daily decisions.
+              <div className="mt-4">
+                <span className="inline-flex items-center rounded-full bg-indigo-500/15 px-3 py-1 text-xs font-semibold text-indigo-200 ring-1 ring-indigo-500/25">
+                  Technology
+                </span>
+              </div>
+              <p className="mt-5 text-sm leading-6 text-zinc-300">
+                “Our goal is to close the gap between actionable reporting and agentic AI—so operators spend less time on tedious screens and more time on the floor, aligned to the core objectives of the dealership.”
               </p>
             </a>
           </div>
@@ -209,21 +219,6 @@ export default function Home() {
               <p className="mt-3 text-sm leading-6 text-zinc-300">
                 We unify DMS, CRM, and vendor systems into a single truth layer—then Kai turns that truth into
                 daily priorities and workflow automation (&ldquo;unleash the bots&rdquo;).
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-6 grid gap-6 md:grid-cols-2">
-            <div className="rounded-3xl bg-white/5 p-7 ring-1 ring-white/10">
-              <div className="text-sm font-semibold text-white">Josh Blick</div>
-              <p className="mt-3 text-sm leading-6 text-zinc-300">
-                “Dealers don’t need more dashboards. They need a daily operating system that tells each leader what changed, why it matters, and what to do next.”
-              </p>
-            </div>
-            <div className="rounded-3xl bg-white/5 p-7 ring-1 ring-white/10">
-              <div className="text-sm font-semibold text-white">William Page III</div>
-              <p className="mt-3 text-sm leading-6 text-zinc-300">
-                “Our goal is to close the gap between reporting and action—so operators spend less time on manual work and more time solving the complex issues that move the store.”
               </p>
             </div>
           </div>
