@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { createPortal } from "react-dom";
 
 type FormState = {
   name: string;
@@ -15,9 +16,14 @@ function validateEmail(email: string) {
 
 export function DemoRequestButton() {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [error, setError] = useState<string>("");
   const [form, setForm] = useState<FormState>({ name: "", email: "", dealership: "", phone: "" });
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const canSubmit = useMemo(() => {
     if (!form.name.trim()) return false;
@@ -67,15 +73,17 @@ export function DemoRequestButton() {
         Request a demo
       </button>
 
-      {open ? (
-        <div className="fixed inset-0 z-[60] flex overflow-y-auto p-4 items-start justify-center sm:items-center">
-          <div
-            className="absolute inset-0 bg-black/70"
-            onClick={resetAndClose}
-            aria-hidden="true"
-          />
+      {open && mounted
+        ? createPortal(
+            <div className="fixed inset-0 z-[60] flex items-center justify-center overflow-y-auto p-4">
+              <div
+                className="absolute inset-0 bg-black/70"
+                onClick={resetAndClose}
+                aria-hidden="true"
+              />
 
-          <div className="relative w-full max-w-lg rounded-3xl bg-[#0B1026] p-6 text-white ring-1 ring-white/15 max-h-[calc(100svh-2rem)] overflow-auto">
+              <div className="relative w-full max-w-lg rounded-3xl bg-[#0B1026] p-6 text-white ring-1 ring-white/15 max-h-[calc(100svh-2rem)] overflow-auto">
+
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <div className="text-lg font-semibold">Request a demo</div>
@@ -183,9 +191,11 @@ export function DemoRequestButton() {
                   </div>
                 </form>
               )}
-          </div>
-        </div>
-      ) : null}
+              </div>
+            </div>,
+            document.body
+          )
+        : null}
     </>
   );
 }
