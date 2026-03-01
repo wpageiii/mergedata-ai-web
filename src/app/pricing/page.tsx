@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 function Plan({
   name,
   price,
+  price2,
   desc,
   bullets,
   cta,
@@ -18,6 +19,7 @@ function Plan({
 }: {
   name: string;
   price: string;
+  price2?: string;
   desc: string;
   bullets: string[];
   cta: string;
@@ -42,6 +44,9 @@ function Plan({
         ) : null}
       </div>
       <div className="mt-4 text-3xl font-semibold text-white">{price}</div>
+      {price2 ? (
+        <div className="mt-2 text-3xl font-semibold text-white">{price2}</div>
+      ) : null}
       <div className="mt-2 text-sm text-zinc-300">{desc}</div>
       <ul className="mt-6 space-y-2 text-sm text-zinc-200">
         {bullets.map((b) => (
@@ -85,7 +90,8 @@ export default function PricingPage() {
           <Plan
             name="Standard"
             price="$995 / month"
-            desc="$995 / month · $1,990 install (one-time). Merge Data API + standard connections with a dedicated Customer Success agent."
+            price2="$1,990 install (one-time)"
+            desc="Merge Data API + standard connections with a dedicated Customer Success agent."
             bullets={[
               "Standard connections for DMS, CRM & Website",
               "Dedicated Merge Data Customer Success agent (install, training, maintenance)",
