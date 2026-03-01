@@ -16,6 +16,7 @@ function Plan({
   cta,
   href,
   highlight,
+  badge,
 }: {
   name: string;
   price: string;
@@ -25,6 +26,7 @@ function Plan({
   cta: string;
   href: string;
   highlight?: boolean;
+  badge?: string;
 }) {
   return (
     <div
@@ -37,7 +39,11 @@ function Plan({
     >
       <div className="flex items-center justify-between">
         <div className="text-sm font-semibold text-white">{name}</div>
-        {highlight ? (
+        {badge ? (
+          <span className="rounded-full bg-emerald-400 px-2 py-1 text-xs font-semibold text-black">
+            {badge}
+          </span>
+        ) : highlight ? (
           <span className="rounded-full bg-white px-2 py-1 text-xs font-semibold text-black">
             Most popular
           </span>
@@ -59,7 +65,7 @@ function Plan({
       <Link
         href={href}
         className={
-          "mt-7 mt-auto inline-flex h-11 w-full items-center justify-center rounded-full px-5 text-sm font-semibold " +
+          "mt-10 mt-auto inline-flex h-11 w-full items-center justify-center rounded-full px-5 text-sm font-semibold " +
           (highlight
             ? "bg-white text-black hover:bg-zinc-200"
             : "bg-white/5 text-white ring-1 ring-white/15 hover:bg-white/10")
@@ -75,7 +81,7 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#070A1A] via-black to-black text-white">
       <SiteNav />
-      <main className="relative mx-auto max-w-6xl px-4 py-10 md:py-14">
+      <main className="relative mx-auto max-w-6xl px-4 py-9 md:py-12">
         <div className="pointer-events-none absolute -top-24 left-1/2 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-emerald-500/10 blur-3xl" />
         <h1 className="text-3xl font-semibold tracking-tight md:text-5xl">
           Pricing that scales with your data.
@@ -101,6 +107,7 @@ export default function PricingPage() {
           />
           <Plan
             name="Enterprise"
+            badge="Customizable"
             price="25 stores +"
             desc="Larger dealership groups tend to have unique requirements for integrations, reporting, and AI workflows. We treat these implementations as flexible and tailored—let’s talk through what you need."
             bullets={[
@@ -113,7 +120,7 @@ export default function PricingPage() {
           />
         </div>
 
-        <div className="mt-14">
+        <div className="mt-11">
           <div className="rounded-3xl bg-white/5 p-8 ring-1 ring-white/10">
             <div className="text-sm font-semibold text-white">AI token credits</div>
             <p className="mt-3 text-sm leading-6 text-zinc-300">
