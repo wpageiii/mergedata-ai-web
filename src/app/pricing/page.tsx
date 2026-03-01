@@ -67,9 +67,6 @@ function Plan({
       >
         {cta}
       </Link>
-      <div className="mt-3 text-xs text-zinc-400">
-        Pricing here is placeholder—happy to tailor to volume + connectors.
-      </div>
     </div>
   );
 }
