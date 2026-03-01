@@ -103,7 +103,133 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How it works (revamp: 01/02/03 cards style) */}
+      <section id="about" className="bg-[#050714]">
+        <div className="mx-auto max-w-7xl px-3 py-16 sm:px-4 md:px-6 md:py-24">
+          <div className="max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400">About us</p>
+            <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white md:text-3xl">
+              Built by dealership operators who’ve scaled this before.
+            </h2>
+            <p className="mt-3 text-sm leading-6 text-zinc-300">
+              It’s not our first rodeo. Our founders helped pioneer dealership reporting and analytics—then came back to rebuild it for an AI-first era.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <a
+              href="https://www.linkedin.com/in/josh-blick-07a21ba"
+              target="_blank"
+              rel="noreferrer"
+              className="group rounded-3xl bg-white/5 p-7 ring-1 ring-white/10 hover:bg-white/[0.06]"
+            >
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex items-center gap-4">
+                  <Image
+                    src="/legacy/josh.png"
+                    alt="Josh Blick"
+                    width={64}
+                    height={64}
+                    className="h-16 w-16 rounded-full ring-1 ring-white/10"
+                  />
+                  <div>
+                    <div className="text-base font-semibold text-white">Josh Blick</div>
+                    <div className="mt-1 text-sm text-zinc-300">Co-Founder</div>
+                  </div>
+                </div>
+                <Image
+                  src="/legacy/linkedin.png"
+                  alt="LinkedIn"
+                  width={22}
+                  height={22}
+                  className="opacity-80 group-hover:opacity-100"
+                />
+              </div>
+              <p className="mt-6 text-sm leading-6 text-zinc-300">
+                Dealer-focused software leader. Built and scaled analytics products used by operators to run the store day-to-day.
+              </p>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/willpageiii"
+              target="_blank"
+              rel="noreferrer"
+              className="group rounded-3xl bg-white/5 p-7 ring-1 ring-white/10 hover:bg-white/[0.06]"
+            >
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex items-center gap-4">
+                  <Image
+                    src="/legacy/william.png"
+                    alt="William Page III"
+                    width={64}
+                    height={64}
+                    className="h-16 w-16 rounded-full ring-1 ring-white/10"
+                  />
+                  <div>
+                    <div className="text-base font-semibold text-white">William Page III</div>
+                    <div className="mt-1 text-sm text-zinc-300">Co-Founder</div>
+                  </div>
+                </div>
+                <Image
+                  src="/legacy/linkedin.png"
+                  alt="LinkedIn"
+                  width={22}
+                  height={22}
+                  className="opacity-80 group-hover:opacity-100"
+                />
+              </div>
+              <p className="mt-6 text-sm leading-6 text-zinc-300">
+                Builder and operator. Focused on making dealership data reliable, actionable, and fast enough for daily decisions.
+              </p>
+            </a>
+          </div>
+
+          {/* Proof points + POV */}
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <div className="rounded-3xl bg-black/30 p-7 ring-1 ring-white/10">
+              <div className="text-xs font-semibold uppercase tracking-wider text-zinc-400">Credibility</div>
+              <div className="mt-3 text-base font-semibold text-white">Executive Eye (2009–2018)</div>
+              <p className="mt-3 text-sm leading-6 text-zinc-300">
+                Our previous product scaled to <span className="text-white">~1,000 rooftops</span> and was acquired by
+                <span className="text-white"> CDK Global</span>. We’ve lived dealership operations and we know what breaks when numbers can’t be trusted.
+              </p>
+            </div>
+
+            <div className="rounded-3xl bg-black/30 p-7 ring-1 ring-white/10">
+              <div className="text-xs font-semibold uppercase tracking-wider text-zinc-400">Why now</div>
+              <div className="mt-3 text-base font-semibold text-white">AI changed the bar</div>
+              <p className="mt-3 text-sm leading-6 text-zinc-300">
+                After our non-compete, we saw a gap forming: legacy tools weren’t built to leverage AI reliably.
+                Dealers needed a platform designed for the next decade—not the last.
+              </p>
+            </div>
+
+            <div className="rounded-3xl bg-black/30 p-7 ring-1 ring-white/10">
+              <div className="text-xs font-semibold uppercase tracking-wider text-zinc-400">What’s different</div>
+              <div className="mt-3 text-base font-semibold text-white">Truth → priorities → automation</div>
+              <p className="mt-3 text-sm leading-6 text-zinc-300">
+                We unify DMS, CRM, and vendor systems into a single truth layer—then Kai turns that truth into
+                daily priorities and workflow automation (&ldquo;unleash the bots&rdquo;).
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            <div className="rounded-3xl bg-white/5 p-7 ring-1 ring-white/10">
+              <div className="text-sm font-semibold text-white">Josh Blick</div>
+              <p className="mt-3 text-sm leading-6 text-zinc-300">
+                “Dealers don’t need more dashboards. They need a daily operating system that tells each leader what changed, why it matters, and what to do next.”
+              </p>
+            </div>
+            <div className="rounded-3xl bg-white/5 p-7 ring-1 ring-white/10">
+              <div className="text-sm font-semibold text-white">William Page III</div>
+              <p className="mt-3 text-sm leading-6 text-zinc-300">
+                “Our goal is to close the gap between reporting and action—so operators spend less time on manual work and more time solving the complex issues that move the store.”
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="how" className="bg-[#050714]">
         <div className="mx-auto max-w-7xl px-3 py-16 sm:px-4 md:px-6 md:py-24">
           <div className="max-w-2xl">
@@ -232,7 +358,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Integrations (tiers) */}
       <section id="integrations" className="border-y border-white/10 bg-[#050714]">
         <div className="mx-auto max-w-7xl px-3 py-16 sm:px-4 md:px-6 md:py-24">
           <div className="max-w-2xl">
@@ -299,134 +424,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About (revamp: founder cards like legacy) */}
-      <section id="about" className="bg-[#050714]">
-        <div className="mx-auto max-w-7xl px-3 py-16 sm:px-4 md:px-6 md:py-24">
-          <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400">About us</p>
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white md:text-3xl">
-              Built by dealership operators who’ve scaled this before.
-            </h2>
-            <p className="mt-3 text-sm leading-6 text-zinc-300">
-              It’s not our first rodeo. Our founders helped pioneer dealership reporting and analytics—then came back to rebuild it for an AI-first era.
-            </p>
-          </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            <a
-              href="https://www.linkedin.com/in/josh-blick-07a21ba"
-              target="_blank"
-              rel="noreferrer"
-              className="group rounded-3xl bg-white/5 p-7 ring-1 ring-white/10 hover:bg-white/[0.06]"
-            >
-              <div className="flex items-start justify-between gap-4">
-                <div className="flex items-center gap-4">
-                  <Image
-                    src="/legacy/josh.png"
-                    alt="Josh Blick"
-                    width={64}
-                    height={64}
-                    className="h-16 w-16 rounded-full ring-1 ring-white/10"
-                  />
-                  <div>
-                    <div className="text-base font-semibold text-white">Josh Blick</div>
-                    <div className="mt-1 text-sm text-zinc-300">Co-Founder</div>
-                  </div>
-                </div>
-                <Image
-                  src="/legacy/linkedin.png"
-                  alt="LinkedIn"
-                  width={22}
-                  height={22}
-                  className="opacity-80 group-hover:opacity-100"
-                />
-              </div>
-              <p className="mt-6 text-sm leading-6 text-zinc-300">
-                Dealer-focused software leader. Built and scaled analytics products used by operators to run the store day-to-day.
-              </p>
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/willpageiii"
-              target="_blank"
-              rel="noreferrer"
-              className="group rounded-3xl bg-white/5 p-7 ring-1 ring-white/10 hover:bg-white/[0.06]"
-            >
-              <div className="flex items-start justify-between gap-4">
-                <div className="flex items-center gap-4">
-                  <Image
-                    src="/legacy/william.png"
-                    alt="William Page III"
-                    width={64}
-                    height={64}
-                    className="h-16 w-16 rounded-full ring-1 ring-white/10"
-                  />
-                  <div>
-                    <div className="text-base font-semibold text-white">William Page III</div>
-                    <div className="mt-1 text-sm text-zinc-300">Co-Founder</div>
-                  </div>
-                </div>
-                <Image
-                  src="/legacy/linkedin.png"
-                  alt="LinkedIn"
-                  width={22}
-                  height={22}
-                  className="opacity-80 group-hover:opacity-100"
-                />
-              </div>
-              <p className="mt-6 text-sm leading-6 text-zinc-300">
-                Builder and operator. Focused on making dealership data reliable, actionable, and fast enough for daily decisions.
-              </p>
-            </a>
-          </div>
-
-          {/* Proof points + POV */}
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            <div className="rounded-3xl bg-black/30 p-7 ring-1 ring-white/10">
-              <div className="text-xs font-semibold uppercase tracking-wider text-zinc-400">Credibility</div>
-              <div className="mt-3 text-base font-semibold text-white">Executive Eye (2009–2018)</div>
-              <p className="mt-3 text-sm leading-6 text-zinc-300">
-                Our previous product scaled to <span className="text-white">~1,000 rooftops</span> and was acquired by
-                <span className="text-white"> CDK Global</span>. We’ve lived dealership operations and we know what breaks when numbers can’t be trusted.
-              </p>
-            </div>
-
-            <div className="rounded-3xl bg-black/30 p-7 ring-1 ring-white/10">
-              <div className="text-xs font-semibold uppercase tracking-wider text-zinc-400">Why now</div>
-              <div className="mt-3 text-base font-semibold text-white">AI changed the bar</div>
-              <p className="mt-3 text-sm leading-6 text-zinc-300">
-                After our non-compete, we saw a gap forming: legacy tools weren’t built to leverage AI reliably.
-                Dealers needed a platform designed for the next decade—not the last.
-              </p>
-            </div>
-
-            <div className="rounded-3xl bg-black/30 p-7 ring-1 ring-white/10">
-              <div className="text-xs font-semibold uppercase tracking-wider text-zinc-400">What’s different</div>
-              <div className="mt-3 text-base font-semibold text-white">Truth → priorities → automation</div>
-              <p className="mt-3 text-sm leading-6 text-zinc-300">
-                We unify DMS, CRM, and vendor systems into a single truth layer—then Kai turns that truth into
-                daily priorities and workflow automation (&ldquo;unleash the bots&rdquo;).
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-6 grid gap-6 md:grid-cols-2">
-            <div className="rounded-3xl bg-white/5 p-7 ring-1 ring-white/10">
-              <div className="text-sm font-semibold text-white">Josh Blick</div>
-              <p className="mt-3 text-sm leading-6 text-zinc-300">
-                “Dealers don’t need more dashboards. They need a daily operating system that tells each leader what changed, why it matters, and what to do next.”
-              </p>
-            </div>
-            <div className="rounded-3xl bg-white/5 p-7 ring-1 ring-white/10">
-              <div className="text-sm font-semibold text-white">William Page III</div>
-              <p className="mt-3 text-sm leading-6 text-zinc-300">
-                “Our goal is to close the gap between reporting and action—so operators spend less time on manual work and more time solving the complex issues that move the store.”
-              </p>
-            </div>
-          </div>
-
-          {/* Security & Privacy (concise) */}
-          <div id="security" className="mt-10 rounded-3xl bg-black/30 p-7 ring-1 ring-white/10">
+      {/* Security & Privacy (concise) */}
+      <section id="security" className="bg-[#050714]">
+        <div className="mx-auto max-w-7xl px-3 pb-16 sm:px-4 md:px-6">
+          <div className="mt-2 rounded-3xl bg-black/30 p-7 ring-1 ring-white/10">
             <div className="flex items-start justify-between gap-6">
               <div>
                 <div className="text-sm font-semibold text-white">Security & privacy</div>
@@ -496,133 +497,6 @@ export default function Home() {
               title="Change management"
               desc="Detect schema drift and upstream changes. Avoid the ‘mystery dashboard broke’ fire drills."
             />
-          </div>
-        </div>
-      </section>
-
-      {/* How it works */}
-      <section id="how" className="border-y border-white/10 bg-gradient-to-b from-black to-black">
-        <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
-          <div className="grid gap-10 md:grid-cols-2 md:items-start">
-            <div>
-              <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
-                From raw sources to warehouse tables.
-              </h2>
-              <p className="mt-3 text-sm leading-6 text-zinc-300">
-                You bring the connections. We handle the normalization, keys, and reliability.
-              </p>
-            </div>
-            <div className="space-y-4">
-              {[ 
-                {
-                  n: "01",
-                  t: "Connect",
-                  d: "Link your CRM, billing, product DB, and spreadsheets in minutes.",
-                },
-                {
-                  n: "02",
-                  t: "Model",
-                  d: "Apply consistent definitions (MRR, ARR, active customer) and map entities across systems.",
-                },
-                {
-                  n: "03",
-                  t: "Ship",
-                  d: "Deliver versioned, documented tables to Snowflake/BigQuery/Redshift.",
-                },
-              ].map((s) => (
-                <div key={s.n} className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-full bg-white/10 px-2 py-1 text-xs font-semibold text-zinc-200 ring-1 ring-white/15">
-                      {s.n}
-                    </div>
-                    <div className="text-sm font-semibold text-white">{s.t}</div>
-                  </div>
-                  <div className="mt-2 text-sm leading-6 text-zinc-300">{s.d}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Security */}
-      <section id="security" className="bg-black">
-        <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
-          <div className="grid gap-10 md:grid-cols-2 md:items-center">
-            <div>
-              <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
-                Enterprise-grade security, by default.
-              </h2>
-              <p className="mt-3 text-sm leading-6 text-zinc-300">
-                Treat customer data like it matters—because it does.
-              </p>
-              <ul className="mt-6 space-y-3 text-sm text-zinc-300">
-                <li className="flex gap-3">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-emerald-400" />
-                  Least-privilege connections and scoped credentials.
-                </li>
-                <li className="flex gap-3">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-emerald-400" />
-                  Audit-friendly logs for syncs and transformations.
-                </li>
-                <li className="flex gap-3">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-emerald-400" />
-                  Field-level access controls for sensitive data.
-                </li>
-              </ul>
-            </div>
-
-            <div className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
-              <div className="text-sm font-semibold text-white">Security checklist</div>
-              <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                {[
-                  "SSO-ready",
-                  "RBAC",
-                  "Encrypted secrets",
-                  "IP allowlists",
-                  "Dedicated envs",
-                  "Compliance support",
-                ].map((x) => (
-                  <div key={x} className="rounded-2xl bg-black/30 px-4 py-3 text-xs text-zinc-200 ring-1 ring-white/10">
-                    {x}
-                  </div>
-                ))}
-              </div>
-              <div className="mt-4 text-xs text-zinc-400">
-                (We’ll tailor controls based on your deployment + data sensitivity.)
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="border-t border-white/10 bg-black">
-        <div className="mx-auto max-w-7xl px-3 py-16 sm:px-4 md:px-6">
-          <div className="rounded-3xl bg-gradient-to-r from-white/10 to-white/5 p-8 ring-1 ring-white/15 md:p-12">
-            <div className="max-w-2xl">
-              <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
-                Want the updated MergeData.ai experience?
-              </h2>
-              <p className="mt-3 text-sm leading-6 text-zinc-300">
-                Tell us your sources + destination. We’ll show you a live walkthrough and a suggested
-                canonical model.
-              </p>
-              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                <Link
-                  href="/contact"
-                  className="inline-flex h-11 items-center justify-center rounded-full bg-white px-5 text-sm font-semibold text-black hover:bg-zinc-200"
-                >
-                  Request a demo
-                </Link>
-                <Link
-                  href="/pricing"
-                  className="inline-flex h-11 items-center justify-center rounded-full bg-white/5 px-5 text-sm font-semibold text-white ring-1 ring-white/15 hover:bg-white/10"
-                >
-                  View pricing
-                </Link>
-              </div>
-            </div>
           </div>
         </div>
       </section>
