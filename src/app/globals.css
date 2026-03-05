@@ -41,16 +41,16 @@ body {
   /* bubble pop + fall off (mario bubble vibe) */
   78% {
     opacity: 1;
-    transform: translate3d(110vw, calc(var(--drift, 0px) - 10px), 0) scale(1.06);
-    filter: blur(0px);
+    transform: translate3d(110vw, calc(var(--drift, 0px) - 12px), 0) scale(1.22);
+    filter: blur(0px) drop-shadow(0 0 18px rgba(255, 255, 255, 0.35)) drop-shadow(0 0 28px rgba(34, 211, 238, 0.22));
   }
-  82% {
+  86% {
     opacity: 0;
-    transform: translate3d(118vw, calc(var(--drift, 0px) + 120px), 0) scale(0.7) rotate(18deg);
-    filter: blur(1px);
+    transform: translate3d(120vw, calc(var(--drift, 0px) + 150px), 0) scale(0.62) rotate(22deg);
+    filter: blur(1px) drop-shadow(0 0 10px rgba(255, 255, 255, 0.12));
   }
   100% {
-    transform: translate3d(140vw, calc(var(--drift, 0px) + 220px), 0) scale(0.7) rotate(22deg);
+    transform: translate3d(140vw, calc(var(--drift, 0px) + 260px), 0) scale(0.62) rotate(26deg);
     opacity: 0;
     filter: blur(1px);
   }
