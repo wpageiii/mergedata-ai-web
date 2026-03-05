@@ -48,15 +48,8 @@ export default function HeroKaiLoop({ intervalMs = 2600 }: { intervalMs?: number
 
   return (
     <div className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
-      <div className="flex items-center justify-between gap-4">
-        <div className="text-sm font-semibold text-white">Kai (loop)</div>
-        <span className="rounded-full bg-emerald-500/15 px-2 py-1 text-xs font-medium text-emerald-200 ring-1 ring-emerald-500/20">
-          Live
-        </span>
-      </div>
-
       {/* Big looping word (above) */}
-      <div className="mt-4 text-center">
+      <div className="text-center">
         <div className="text-xs font-semibold uppercase tracking-[0.22em] text-zinc-400">Mode</div>
         <div className="mt-1 text-2xl font-extrabold tracking-tight text-white md:text-3xl">
           {steps[idx]?.label}
@@ -92,9 +85,9 @@ export default function HeroKaiLoop({ intervalMs = 2600 }: { intervalMs?: number
         ))}
       </div>
 
-      <p className="mt-3 text-center text-xs text-zinc-500">
-        {reducedMotion ? "Animation disabled (Reduce Motion)." : "Looping demonstration."}
-      </p>
+      {reducedMotion ? (
+        <p className="mt-3 text-center text-xs text-zinc-500">Animation disabled (Reduce Motion).</p>
+      ) : null}
     </div>
   );
 }

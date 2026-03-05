@@ -36,8 +36,8 @@ export default function IntegrationFlow({
   const tiles = pickLoop(logos, density).map((l, i) => {
     const lane = i % 6; // 0..5
     const delay = (i % 7) * 0.65;
-    const dur = 6.5 + (i % 5) * 1.25;
-    const size = 44 + (i % 4) * 10; // 44..74
+    const dur = 9.5 + (i % 5) * 1.75;
+    const size = 68 + (i % 4) * 14; // 68..110
     const drift = (lane - 2.5) * 10;
 
     return {
@@ -54,7 +54,7 @@ export default function IntegrationFlow({
   return (
     <div className="relative overflow-hidden rounded-3xl bg-black/30 ring-1 ring-white/10">
       {/* background hero */}
-      <div className="relative aspect-[21/9] w-full max-h-[420px]">
+      <div className="relative aspect-[16/8.2] w-full">
         <Image
           src="/images/ai/integrations-flow-hero.png"
           alt="Kai + MergeData integrations"
@@ -83,7 +83,7 @@ export default function IntegrationFlow({
               }
             >
               <div className="md-flow-tile-inner relative">
-                <Image src={t.src} alt={t.name} fill className="object-contain p-3" />
+                <Image src={t.src} alt={t.name} fill className="object-contain p-4" />
               </div>
             </div>
           ))}
