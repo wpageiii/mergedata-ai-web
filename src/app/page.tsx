@@ -343,7 +343,7 @@ export default function Home() {
                 </div>
                 <div className="overflow-hidden rounded-3xl bg-black/30 ring-1 ring-white/10">
                   <Image
-                    src="/images/ai/kai-operator-v2.png"
+                    src="/images/ai/kai-operator-v3.png"
                     alt="Kai embedded operator"
                     width={1200}
                     height={760}
