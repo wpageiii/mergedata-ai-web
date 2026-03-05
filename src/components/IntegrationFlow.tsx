@@ -91,10 +91,10 @@ export default function IntegrationFlow({
         </div>
       </div>
 
-      {/* reduced-motion fallback copy */}
       <div className="border-t border-white/10 px-5 py-4">
         <p className="text-xs text-zinc-400">
-          <span className="font-semibold text-zinc-200">Tier 1 + Tier 2</span> integrations flowing into Kai → MergeData.
+          <span className="font-semibold text-zinc-200">Tier 1 + Tier 2</span> integrations floating into Kai → MergeData.
+          <span className="ml-2 text-zinc-500">(Animated on desktop. Hidden if “Reduce motion” is enabled.)</span>
         </p>
       </div>
     </div>
