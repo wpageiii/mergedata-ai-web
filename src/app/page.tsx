@@ -257,14 +257,14 @@ export default function Home() {
                   </p>
                   <p className="mt-3 text-sm leading-6 text-zinc-300">Dealers do not need another dashboard tool.</p>
                 </div>
-                <div className="rounded-3xl bg-black/30 p-4 ring-1 ring-white/10">
-                  <div className="text-xs font-semibold text-white">Graphic placeholder</div>
-                  <div className="mt-3 grid grid-cols-3 gap-2">
-                    {Array.from({ length: 9 }).map((_, i) => (
-                      <div key={i} className="h-12 rounded-2xl bg-white/5 ring-1 ring-white/10" />
-                    ))}
-                  </div>
-                  <p className="mt-3 text-xs text-zinc-400">Dealer in an office staring at ~10 screens/dashboards.</p>
+                <div className="overflow-hidden rounded-3xl bg-black/30 ring-1 ring-white/10">
+                  <Image
+                    src="/images/ai/too-many-dashboards.png"
+                    alt="Too many dashboards"
+                    width={1200}
+                    height={760}
+                    className="h-auto w-full"
+                  />
                 </div>
               </div>
             </Reveal>
@@ -343,6 +343,16 @@ export default function Home() {
                   <p className="mt-3 text-sm leading-6 text-zinc-300">
                     These are not chatbots; they are department operators with measurable KPIs.
                   </p>
+
+                  <div className="mt-6 overflow-hidden rounded-3xl bg-black/30 ring-1 ring-white/10">
+                    <Image
+                      src="/images/ai/unleash-the-bots.png"
+                      alt="Unleash the bots"
+                      width={1200}
+                      height={760}
+                      className="h-auto w-full"
+                    />
+                  </div>
                 </div>
                 <div className="rounded-3xl bg-black/30 p-6 ring-1 ring-white/10">
                   <div className="text-sm font-semibold text-white">Roadmap examples</div>
