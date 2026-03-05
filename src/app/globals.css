@@ -34,15 +34,25 @@ body {
     opacity: 0.98;
     filter: blur(0px);
   }
-  82% {
+  70% {
     opacity: 0.98;
+    transform: translate3d(92vw, var(--drift, 0px), 0) scale(0.92);
   }
-  94% {
+  /* bubble pop + fall off (mario bubble vibe) */
+  78% {
+    opacity: 1;
+    transform: translate3d(110vw, calc(var(--drift, 0px) - 10px), 0) scale(1.06);
+    filter: blur(0px);
+  }
+  82% {
     opacity: 0;
+    transform: translate3d(118vw, calc(var(--drift, 0px) + 120px), 0) scale(0.7) rotate(18deg);
+    filter: blur(1px);
   }
   100% {
-    transform: translate3d(140vw, var(--drift, 0px), 0) scale(0.92);
+    transform: translate3d(140vw, calc(var(--drift, 0px) + 220px), 0) scale(0.7) rotate(22deg);
     opacity: 0;
+    filter: blur(1px);
   }
 }
 
@@ -66,6 +76,40 @@ body {
     0 0 26px rgba(99, 102, 241, 0.22),
     0 18px 60px rgba(0, 0, 0, 0.62);
   backdrop-filter: blur(10px);
+}
+
+.md-flow-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 9999px;
+  padding: 4px 8px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.35);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.md-flow-badge-dms {
+  border-color: rgba(34, 211, 238, 0.35);
+  background: rgba(34, 211, 238, 0.14);
+  color: rgba(165, 243, 252, 0.95);
+}
+
+.md-flow-badge-crm {
+  border-color: rgba(99, 102, 241, 0.35);
+  background: rgba(99, 102, 241, 0.16);
+  color: rgba(199, 210, 254, 0.95);
+}
+
+.md-flow-badge-other {
+  border-color: rgba(244, 63, 94, 0.28);
+  background: rgba(244, 63, 94, 0.12);
+  color: rgba(253, 164, 175, 0.95);
 }
 
 @media (prefers-reduced-motion: reduce) {

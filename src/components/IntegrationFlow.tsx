@@ -4,19 +4,20 @@ import Image from "next/image";
 type Logo = {
   name: string;
   src: string;
+  badge: "DMS" | "CRM" | "Other";
 };
 
 const DEFAULT_LOGOS: Logo[] = [
-  { name: "CDK", src: "/legacy/logo-cdk.png" },
-  { name: "Dealertrack", src: "/legacy/logo-dealer-track.png" },
-  { name: "AutoSoft", src: "/legacy/logo-autosoft.png" },
-  { name: "Automate", src: "/legacy/logo-automate.png" },
-  { name: "Elead One", src: "/legacy/logo-eleadOne.png" },
-  { name: "DealerSocket", src: "/legacy/logo-dealersocket.png" },
-  { name: "DealerMine", src: "/legacy/logo-dealermine.png" },
-  { name: "CarGurus", src: "/legacy/logo-cargurus.png" },
-  { name: "Adam", src: "/legacy/logo-adam.png" },
-  { name: "RYR", src: "/legacy/logo-ryr.png" },
+  { name: "CDK", src: "/legacy/logo-cdk.png", badge: "DMS" },
+  { name: "Dealertrack", src: "/legacy/logo-dealer-track.png", badge: "DMS" },
+  { name: "AutoSoft", src: "/legacy/logo-autosoft.png", badge: "DMS" },
+  { name: "Automate", src: "/legacy/logo-automate.png", badge: "DMS" },
+  { name: "Elead One", src: "/legacy/logo-eleadOne.png", badge: "CRM" },
+  { name: "DealerSocket", src: "/legacy/logo-dealersocket.png", badge: "CRM" },
+  { name: "DealerMine", src: "/legacy/logo-dealermine.png", badge: "CRM" },
+  { name: "CarGurus", src: "/legacy/logo-cargurus.png", badge: "Other" },
+  { name: "Adam", src: "/legacy/logo-adam.png", badge: "Other" },
+  { name: "RYR", src: "/legacy/logo-ryr.png", badge: "Other" },
 ];
 
 export default function IntegrationFlow({
@@ -87,6 +88,18 @@ export default function IntegrationFlow({
             >
               <div className="md-flow-tile-inner relative">
                 <Image src={t.src} alt={t.name} fill className="object-contain p-0.5" />
+
+                <div
+                  className={`md-flow-badge ${
+                    t.badge === "DMS"
+                      ? "md-flow-badge-dms"
+                      : t.badge === "CRM"
+                        ? "md-flow-badge-crm"
+                        : "md-flow-badge-other"
+                  }`}
+                >
+                  {t.badge}
+                </div>
               </div>
             </div>
           ))}
