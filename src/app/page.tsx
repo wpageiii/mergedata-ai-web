@@ -336,7 +336,7 @@ export default function Home() {
               <div className="grid gap-6 rounded-3xl bg-black/30 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-start">
                 <div className="overflow-hidden rounded-3xl bg-black/30 ring-1 ring-white/10">
                   <Image
-                    src="/images/ai/unleash-the-bots.png"
+                    src="/images/ai/unleash-the-bots-v2.png"
                     alt="Unleash the bots"
                     width={1200}
                     height={760}
