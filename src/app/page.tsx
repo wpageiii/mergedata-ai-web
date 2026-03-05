@@ -349,9 +349,6 @@ export default function Home() {
                   <p className="mt-4 text-sm leading-6 text-zinc-300">
                     After MergeData + Kai are proven at scale, we layer purpose-built expert agents that operate specific dealership workflows.
                   </p>
-                  <p className="mt-3 text-sm leading-6 text-zinc-300">
-                    These are not chatbots; they are department operators with measurable KPIs.
-                  </p>
 
                   <div className="mt-6">
                     <div className="text-sm font-semibold text-white">Roadmap examples</div>
