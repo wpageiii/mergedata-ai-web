@@ -49,10 +49,9 @@ body {
 .md-flow-tile {
   position: absolute;
   left: -14%;
+  z-index: 5;
   border-radius: 9999px;
-  animation-name: md-flow-left-to-right;
-  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-  animation-iteration-count: infinite;
+  /* animation is set inline for reliability */
   will-change: transform, opacity, filter;
 }
 
