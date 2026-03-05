@@ -35,7 +35,12 @@ export default function IntegrationFlow({
   // Create a deterministic loop so we don't re-randomize on every render.
   const tiles = pickLoop(logos, density).map((l, i) => {
     const lane = i % 6; // 0..5
-    const delay = (i % 7) * 0.65;
+
+    // Stagger tiles in small groups so they feel like "batches" drifting across (less overlap).
+    const groupSize = 3;
+    const group = Math.floor(i / groupSize);
+    const delay = group * 3.8 + (i % groupSize) * 0.55;
+
     const dur = 42 + (i % 5) * 6.5;
     const size = 170 + (i % 4) * 22; // 170..236
     const drift = (lane - 2.5) * 10;
