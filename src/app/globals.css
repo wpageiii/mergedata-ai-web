@@ -26,51 +26,36 @@ body {
 /* Integrations animation */
 @keyframes md-flow-left-to-right {
   0% {
-    transform: translate3d(-25vw, 0, 0) scale(0.92);
+    transform: translate3d(-25vw, calc(var(--drift, 0px) + 0px), 0) scale(0.92);
     opacity: 0;
     filter: blur(2px);
   }
   6% {
+    transform: translate3d(-12vw, calc(var(--drift, 0px) + 0px), 0) scale(0.92);
     opacity: 0.98;
     filter: blur(0px);
   }
-  88% {
+  /* steady drift */
+  78% {
+    transform: translate3d(100vw, calc(var(--drift, 0px) + 0px), 0) scale(0.92);
     opacity: 0.98;
   }
-  100% {
-    transform: translate3d(140vw, var(--drift, 0px), 0) scale(0.92);
+  /* visible pop */
+  83% {
+    transform: translate3d(108vw, calc(var(--drift, 0px) - 10px), 0) scale(1.28);
+    opacity: 1;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.35)) drop-shadow(0 0 28px rgba(34, 211, 238, 0.22));
+  }
+  /* fall off */
+  88% {
+    transform: translate3d(118vw, calc(var(--drift, 0px) + 180px), 0) scale(0.6) rotate(18deg);
     opacity: 0;
     filter: blur(1px);
   }
-}
-
-@keyframes md-bubble-pop-fall {
-  0% {
-    transform: translate3d(0, 0, 0) scale(1);
-    opacity: 1;
-  }
-  25% {
-    transform: translate3d(0, -10px, 0) scale(1.28);
-    opacity: 1;
-  }
-  55% {
-    transform: translate3d(0, 140px, 0) scale(0.62) rotate(18deg);
-    opacity: 0.1;
-  }
   100% {
-    transform: translate3d(0, 220px, 0) scale(0.55) rotate(22deg);
+    transform: translate3d(140vw, calc(var(--drift, 0px) + 280px), 0) scale(0.6) rotate(22deg);
     opacity: 0;
-  }
-}
-
-@keyframes md-bubble-ring {
-  0% {
-    transform: translate3d(0, 0, 0) scale(0.6);
-    opacity: 0.85;
-  }
-  100% {
-    transform: translate3d(0, 0, 0) scale(2.4);
-    opacity: 0;
+    filter: blur(1px);
   }
 }
 
@@ -96,16 +81,6 @@ body {
   backdrop-filter: blur(10px);
 }
 
-.md-flow-tile-inner::after {
-  content: "";
-  position: absolute;
-  inset: -6px;
-  border-radius: 9999px;
-  border: 2px solid rgba(255, 255, 255, 0.45);
-  opacity: 0;
-  pointer-events: none;
-  animation: md-bubble-ring 0.9s ease-out var(--popDelay, 0s) infinite;
-}
 
 .md-flow-badge {
   position: absolute;
