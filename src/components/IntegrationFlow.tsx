@@ -19,12 +19,6 @@ const DEFAULT_LOGOS: Logo[] = [
   { name: "RYR", src: "/legacy/logo-ryr.png" },
 ];
 
-function pickLoop<T>(arr: T[], count: number): T[] {
-  const out: T[] = [];
-  for (let i = 0; i < count; i++) out.push(arr[i % arr.length]);
-  return out;
-}
-
 export default function IntegrationFlow({
   logos = DEFAULT_LOGOS,
   density = 14,
@@ -32,22 +26,26 @@ export default function IntegrationFlow({
   logos?: Logo[];
   density?: number;
 }) {
-  // Create a deterministic loop so we don't re-randomize on every render.
-  const tiles = pickLoop(logos, density).map((l, i) => {
+  // Deterministic: ensure each visible "batch" is 4 distinct companies (no repeats inside the group).
+  const groupSize = 4;
+
+  const tiles = Array.from({ length: density }).map((_, i) => {
     const lane = i % 6; // 0..5
 
-    // Stagger tiles in small groups so they feel like "batches" drifting across (less overlap).
-    const groupSize = 3;
     const group = Math.floor(i / groupSize);
-    const delay = group * 3.8 + (i % groupSize) * 0.55;
+    const pos = i % groupSize;
+    const logo = logos[(group * groupSize + pos) % logos.length];
+
+    // Stagger group starts so batches drift across with breathing room (less overlap).
+    const delay = group * 6.0 + pos * 0.75;
 
     const dur = 42 + (i % 5) * 6.5;
     const size = 170 + (i % 4) * 22; // 170..236
     const drift = (lane - 2.5) * 10;
 
     return {
-      ...l,
-      key: `${l.name}-${i}`,
+      ...logo,
+      key: `${logo.name}-${i}`,
       lane,
       delay,
       dur,
