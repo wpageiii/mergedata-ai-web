@@ -285,8 +285,8 @@ export default function Home() {
                 </div>
                 <div className="overflow-hidden rounded-3xl bg-black/30 ring-1 ring-white/10">
                   <Image
-                    src="/legacy/home-md.png"
-                    alt="MergeData platform preview"
+                    src="/images/ai/unified-platform.png"
+                    alt="Unified platform"
                     width={1200}
                     height={760}
                     className="h-auto w-full"
@@ -321,8 +321,8 @@ export default function Home() {
                 </div>
                 <div className="overflow-hidden rounded-3xl bg-black/30 ring-1 ring-white/10">
                   <Image
-                    src="/legacy/predictive-ai.png"
-                    alt="Kai embedded operator preview"
+                    src="/images/ai/kai-operator.png"
+                    alt="Kai embedded operator"
                     width={1200}
                     height={760}
                     className="h-auto w-full"
@@ -334,7 +334,16 @@ export default function Home() {
             {/* 04 */}
             <Reveal from="right" delayMs={100}>
               <div className="grid gap-6 rounded-3xl bg-black/30 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-start">
-                <div>
+                <div className="overflow-hidden rounded-3xl bg-black/30 ring-1 ring-white/10">
+                  <Image
+                    src="/images/ai/unleash-the-bots.png"
+                    alt="Unleash the bots"
+                    width={1200}
+                    height={760}
+                    className="h-auto w-full"
+                  />
+                </div>
+                <div className="rounded-3xl bg-black/30 p-6 ring-1 ring-white/10">
                   <div className="text-sm font-semibold text-zinc-300">04.</div>
                   <div className="mt-2 text-2xl font-semibold text-white">Unleash the bots</div>
                   <p className="mt-4 text-sm leading-6 text-zinc-300">
@@ -344,25 +353,16 @@ export default function Home() {
                     These are not chatbots; they are department operators with measurable KPIs.
                   </p>
 
-                  <div className="mt-6 overflow-hidden rounded-3xl bg-black/30 ring-1 ring-white/10">
-                    <Image
-                      src="/images/ai/unleash-the-bots.png"
-                      alt="Unleash the bots"
-                      width={1200}
-                      height={760}
-                      className="h-auto w-full"
-                    />
+                  <div className="mt-6">
+                    <div className="text-sm font-semibold text-white">Roadmap examples</div>
+                    <ul className="mt-4 space-y-2 text-sm text-zinc-200">
+                      <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-fuchsia-400" />MD Titling Agent — reduces funding friction + title backlog + compliance risk</li>
+                      <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-fuchsia-400" />MD Parts Ordering Agent — optimizes parts ordering workflow (including DMS writeback where allowed)</li>
+                      <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-fuchsia-400" />MD Inventory Acquisition Agent — improves buy discipline, turn, and margin protection</li>
+                      <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-fuchsia-400" />MD Recon Expert Agent — reduces recon days, cost variance, and frontline readiness delays</li>
+                      <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-fuchsia-400" />MD Payment Plan Agent — optimizes sales spiffs/incentives for behavior + margin efficiency</li>
+                    </ul>
                   </div>
-                </div>
-                <div className="rounded-3xl bg-black/30 p-6 ring-1 ring-white/10">
-                  <div className="text-sm font-semibold text-white">Roadmap examples</div>
-                  <ul className="mt-4 space-y-2 text-sm text-zinc-200">
-                    <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-fuchsia-400" />MD Titling Agent — reduces funding friction + title backlog + compliance risk</li>
-                    <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-fuchsia-400" />MD Parts Ordering Agent — optimizes parts ordering workflow (including DMS writeback where allowed)</li>
-                    <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-fuchsia-400" />MD Inventory Acquisition Agent — improves buy discipline, turn, and margin protection</li>
-                    <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-fuchsia-400" />MD Recon Expert Agent — reduces recon days, cost variance, and frontline readiness delays</li>
-                    <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-fuchsia-400" />MD Payment Plan Agent — optimizes sales spiffs/incentives for behavior + margin efficiency</li>
-                  </ul>
                 </div>
               </div>
             </Reveal>
