@@ -36,7 +36,7 @@ export default function IntegrationFlow({
   const tiles = pickLoop(logos, density).map((l, i) => {
     const lane = i % 6; // 0..5
     const delay = (i % 7) * 0.65;
-    const dur = 22 + (i % 5) * 3.5;
+    const dur = 42 + (i % 5) * 6.5;
     const size = 170 + (i % 4) * 22; // 170..236
     const drift = (lane - 2.5) * 10;
 
