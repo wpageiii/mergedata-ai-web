@@ -3,6 +3,7 @@ import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { Footer } from "@/components/Footer";
 import { LogoCarousel } from "@/components/LogoCarousel";
+import IntegrationFlow from "@/components/IntegrationFlow";
 import { Reveal } from "@/components/Reveal";
 
 function Pill({ children }: { children: React.ReactNode }) {
@@ -378,40 +379,48 @@ export default function Home() {
             <p className="mt-3 text-sm leading-6 text-zinc-300">Seamless connections to the dealership systems that matter.</p>
           </div>
 
-          <div className="mt-10 space-y-10">
-            <div>
-              <div className="mt-4">
-                <LogoCarousel
-                  logos={[
-                    { name: "CDK", src: "/legacy/logo-cdk.png", badge: "DMS" },
-                    { name: "Dealertrack", src: "/legacy/logo-dealer-track.png", badge: "DMS" },
-                    { name: "AutoSoft", src: "/legacy/logo-autosoft.png", badge: "DMS" },
-                    { name: "Automate", src: "/legacy/logo-automate.png", badge: "DMS" },
-                    { name: "Elead One", src: "/legacy/logo-eleadOne.png", badge: "CRM" },
-                    { name: "DealerSocket", src: "/legacy/logo-dealersocket.png", badge: "CRM" },
-                    { name: "DealerMine", src: "/legacy/logo-dealermine.png", badge: "CRM" },
-                  ]}
-                  label="Tier 1 — Must-have for truth + tasks"
-                  itemMinWidth={240}
-                  itemPaddingY={26}
-                  showBadges
-                />
-              </div>
+          <div className="mt-10">
+            {/* Desktop: animated flow */}
+            <div className="hidden md:block">
+              <IntegrationFlow density={18} />
             </div>
 
-            <div>
-              <div className="mt-4">
-                <LogoCarousel
-                  logos={[
-                    { name: "CarGurus", src: "/legacy/logo-cargurus.png", badge: "Other" },
-                    { name: "Adam", src: "/legacy/logo-adam.png", badge: "Other" },
-                    { name: "RYR", src: "/legacy/logo-ryr.png", badge: "Other" },
-                  ]}
-                  label="Tier 2 — Closes the loop (behavior → outcomes → accelerators)"
-                  itemMinWidth={240}
-                  itemPaddingY={26}
-                  showBadges
-                />
+            {/* Mobile: keep simple carousels */}
+            <div className="space-y-10 md:hidden">
+              <div>
+                <div className="mt-4">
+                  <LogoCarousel
+                    logos={[
+                      { name: "CDK", src: "/legacy/logo-cdk.png", badge: "DMS" },
+                      { name: "Dealertrack", src: "/legacy/logo-dealer-track.png", badge: "DMS" },
+                      { name: "AutoSoft", src: "/legacy/logo-autosoft.png", badge: "DMS" },
+                      { name: "Automate", src: "/legacy/logo-automate.png", badge: "DMS" },
+                      { name: "Elead One", src: "/legacy/logo-eleadOne.png", badge: "CRM" },
+                      { name: "DealerSocket", src: "/legacy/logo-dealersocket.png", badge: "CRM" },
+                      { name: "DealerMine", src: "/legacy/logo-dealermine.png", badge: "CRM" },
+                    ]}
+                    label="Tier 1 — Must-have for truth + tasks"
+                    itemMinWidth={240}
+                    itemPaddingY={26}
+                    showBadges
+                  />
+                </div>
+              </div>
+
+              <div>
+                <div className="mt-4">
+                  <LogoCarousel
+                    logos={[
+                      { name: "CarGurus", src: "/legacy/logo-cargurus.png", badge: "Other" },
+                      { name: "Adam", src: "/legacy/logo-adam.png", badge: "Other" },
+                      { name: "RYR", src: "/legacy/logo-ryr.png", badge: "Other" },
+                    ]}
+                    label="Tier 2 — Closes the loop (behavior → outcomes → accelerators)"
+                    itemMinWidth={240}
+                    itemPaddingY={26}
+                    showBadges
+                  />
+                </div>
               </div>
             </div>
           </div>
