@@ -54,13 +54,13 @@ export default function IntegrationFlow({
   return (
     <div className="relative overflow-hidden rounded-3xl bg-black/30 ring-1 ring-white/10">
       {/* background hero */}
-      <div className="relative aspect-[16/9] w-full">
+      <div className="relative aspect-[21/9] w-full max-h-[420px]">
         <Image
           src="/images/ai/integrations-flow-hero.png"
           alt="Kai + MergeData integrations"
           fill
           priority={false}
-          className="object-cover"
+          className="object-cover object-right"
         />
 
         {/* subtle vignette for contrast */}

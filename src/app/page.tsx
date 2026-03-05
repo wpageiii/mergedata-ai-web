@@ -4,6 +4,7 @@ import { SiteNav } from "@/components/SiteNav";
 import { Footer } from "@/components/Footer";
 import { LogoCarousel } from "@/components/LogoCarousel";
 import IntegrationFlow from "@/components/IntegrationFlow";
+import HeroKaiLoop from "@/components/HeroKaiLoop";
 import { Reveal } from "@/components/Reveal";
 
 function Pill({ children }: { children: React.ReactNode }) {
@@ -72,40 +73,9 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Visual: reuse legacy assets */}
+            {/* Visual: Kai hero loop */}
             <div className="relative">
-              <div className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
-                <div className="flex items-center justify-between">
-                  <div className="text-sm font-semibold text-white">Kai (preview)</div>
-                  <span className="rounded-full bg-emerald-500/15 px-2 py-1 text-xs font-medium text-emerald-200 ring-1 ring-emerald-500/20">
-                    Looping
-                  </span>
-                </div>
-                <div className="mt-4 overflow-hidden rounded-2xl ring-1 ring-white/10">
-                  <Image
-                    src="/legacy/login-ai-kai.gif"
-                    alt="Kai preview"
-                    width={960}
-                    height={600}
-                    className="h-auto w-full"
-                    unoptimized
-                  />
-                </div>
-                <div className="mt-4 grid grid-cols-3 gap-2 text-[11px] text-zinc-300">
-                  {[
-                    "Detect",
-                    "Explain",
-                    "Prioritize",
-                    "Recommend",
-                    "Summarize",
-                    "Route work",
-                  ].map((x) => (
-                    <div key={x} className="rounded-full bg-black/30 px-3 py-2 text-center ring-1 ring-white/10">
-                      {x}
-                    </div>
-                  ))}
-                </div>
-              </div>
+              <HeroKaiLoop />
             </div>
           </div>
         </div>

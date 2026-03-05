@@ -26,7 +26,7 @@ body {
 /* Integrations animation */
 @keyframes md-flow-left-to-right {
   0% {
-    transform: translate3d(-6%, 0, 0) scale(0.92);
+    transform: translate3d(-25vw, 0, 0) scale(0.92);
     opacity: 0;
     filter: blur(2px);
   }
@@ -41,14 +41,14 @@ body {
     opacity: 0;
   }
   100% {
-    transform: translate3d(112%, var(--drift, 0px), 0) scale(0.92);
+    transform: translate3d(140vw, var(--drift, 0px), 0) scale(0.92);
     opacity: 0;
   }
 }
 
 .md-flow-tile {
   position: absolute;
-  left: -8%;
+  left: 0;
   z-index: 5;
   border-radius: 9999px;
   /* animation is set inline for reliability */
