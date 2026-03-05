@@ -44,6 +44,9 @@ export default function IntegrationFlow({
     const size = 170 + (i % 4) * 22; // 170..236
     const drift = (lane - 2.5) * 10;
 
+    // Trigger a visible "pop" + fall during the final ~20% of the pass.
+    const popDelay = delay + dur * 0.8;
+
     return {
       ...logo,
       key: `${logo.name}-${i}`,
@@ -52,6 +55,7 @@ export default function IntegrationFlow({
       dur,
       size,
       drift,
+      popDelay,
     };
   });
 
@@ -86,7 +90,15 @@ export default function IntegrationFlow({
                 } as React.CSSProperties
               }
             >
-              <div className="md-flow-tile-inner relative">
+              <div
+                className="md-flow-tile-inner relative"
+                style={
+                  {
+                    animation: `md-bubble-pop-fall 1.35s ease-out ${t.popDelay}s infinite both`,
+                    "--popDelay": `${t.popDelay}s`,
+                  } as React.CSSProperties
+                }
+              >
                 <Image src={t.src} alt={t.name} fill className="object-contain p-0.5" />
 
                 <div

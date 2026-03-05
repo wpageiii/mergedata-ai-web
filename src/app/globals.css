@@ -34,25 +34,43 @@ body {
     opacity: 0.98;
     filter: blur(0px);
   }
-  70% {
+  88% {
     opacity: 0.98;
-    transform: translate3d(92vw, var(--drift, 0px), 0) scale(0.92);
-  }
-  /* bubble pop + fall off (mario bubble vibe) */
-  78% {
-    opacity: 1;
-    transform: translate3d(110vw, calc(var(--drift, 0px) - 12px), 0) scale(1.22);
-    filter: blur(0px) drop-shadow(0 0 18px rgba(255, 255, 255, 0.35)) drop-shadow(0 0 28px rgba(34, 211, 238, 0.22));
-  }
-  86% {
-    opacity: 0;
-    transform: translate3d(120vw, calc(var(--drift, 0px) + 150px), 0) scale(0.62) rotate(22deg);
-    filter: blur(1px) drop-shadow(0 0 10px rgba(255, 255, 255, 0.12));
   }
   100% {
-    transform: translate3d(140vw, calc(var(--drift, 0px) + 260px), 0) scale(0.62) rotate(26deg);
+    transform: translate3d(140vw, var(--drift, 0px), 0) scale(0.92);
     opacity: 0;
     filter: blur(1px);
+  }
+}
+
+@keyframes md-bubble-pop-fall {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: translate3d(0, -10px, 0) scale(1.28);
+    opacity: 1;
+  }
+  55% {
+    transform: translate3d(0, 140px, 0) scale(0.62) rotate(18deg);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translate3d(0, 220px, 0) scale(0.55) rotate(22deg);
+    opacity: 0;
+  }
+}
+
+@keyframes md-bubble-ring {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.6);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(2.4);
+    opacity: 0;
   }
 }
 
@@ -76,6 +94,17 @@ body {
     0 0 26px rgba(99, 102, 241, 0.22),
     0 18px 60px rgba(0, 0, 0, 0.62);
   backdrop-filter: blur(10px);
+}
+
+.md-flow-tile-inner::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 9999px;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  animation: md-bubble-ring 0.9s ease-out var(--popDelay, 0s) infinite;
 }
 
 .md-flow-badge {
