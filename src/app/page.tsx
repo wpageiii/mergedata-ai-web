@@ -274,7 +274,7 @@ export default function Home() {
               <div className="grid gap-6 rounded-3xl bg-black/30 p-6 ring-1 ring-white/10 md:grid-cols-2 md:items-center">
                 <div className="overflow-hidden rounded-3xl bg-black/30 ring-1 ring-white/10">
                   <Image
-                    src="/images/ai/unified-platform.png"
+                    src="/images/ai/unified-platform-v2.png"
                     alt="Unified platform"
                     width={1200}
                     height={760}
@@ -292,27 +292,6 @@ export default function Home() {
                     MergeData is not “another reporting tool.” It is the operational system of record for dealership truth.
                   </p>
 
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {[
-                      { name: 'CDK', badge: 'DMS' },
-                      { name: 'Dealertrack', badge: 'DMS' },
-                      { name: 'AutoSoft', badge: 'DMS' },
-                      { name: 'Automate', badge: 'DMS' },
-                      { name: 'Elead One', badge: 'CRM' },
-                      { name: 'DealerSocket', badge: 'CRM' },
-                      { name: 'DealerMine', badge: 'CRM' },
-                    ].map((x) => (
-                      <span
-                        key={x.name}
-                        className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-xs font-semibold text-zinc-200 ring-1 ring-white/10"
-                      >
-                        <span className="text-zinc-100">{x.name}</span>
-                        <span className="rounded-full bg-indigo-500/15 px-2 py-0.5 text-[10px] font-semibold text-indigo-200 ring-1 ring-indigo-500/20">
-                          {x.badge}
-                        </span>
-                      </span>
-                    ))}
-                  </div>
                 </div>
               </div>
             </Reveal>
