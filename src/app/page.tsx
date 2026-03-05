@@ -203,6 +203,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 30 day promise badge (not in nav) */}
+      <section aria-label="30 day promise" className="bg-[#050714]">
+        <div className="mx-auto max-w-7xl px-3 pb-4 sm:px-4 md:px-6">
+          <div className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
+            <div className="inline-flex items-center rounded-full bg-indigo-500/15 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-indigo-200 ring-1 ring-indigo-500/25">
+              Our 30 day promise
+            </div>
+            <p className="mt-4 text-sm leading-6 text-zinc-200 md:text-base">
+              After 30 days, MergeData Platform will change the way your company interacts with data and more than pay for itself
+              in expense reduction, OPCode margins, and parts demand recapture.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section id="how" className="bg-[#050714]">
         <div className="mx-auto max-w-7xl px-3 py-16 sm:px-4 md:px-6 md:py-24">
           <div className="max-w-2xl">
