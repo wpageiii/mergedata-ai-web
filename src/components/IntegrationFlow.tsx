@@ -80,7 +80,7 @@ export default function IntegrationFlow({
                   width: `${t.size}px`,
                   height: `${t.size}px`,
                   top: `${10 + t.lane * 14}%`,
-                  animation: `md-flow-left-to-right ${t.dur}s cubic-bezier(0.22, 1, 0.36, 1) ${t.delay}s infinite`,
+                  animation: `md-flow-left-to-right ${t.dur}s cubic-bezier(0.22, 1, 0.36, 1) ${t.delay}s infinite both`,
                   "--drift": `${t.drift}px`,
                 } as React.CSSProperties
               }
