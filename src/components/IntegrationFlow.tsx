@@ -36,8 +36,8 @@ export default function IntegrationFlow({
   const tiles = pickLoop(logos, density).map((l, i) => {
     const lane = i % 6; // 0..5
     const delay = (i % 7) * 0.65;
-    const dur = 9.5 + (i % 5) * 1.75;
-    const size = 68 + (i % 4) * 14; // 68..110
+    const dur = 13 + (i % 5) * 2.2;
+    const size = 120 + (i % 4) * 18; // 120..174
     const drift = (lane - 2.5) * 10;
 
     return {
@@ -83,7 +83,7 @@ export default function IntegrationFlow({
               }
             >
               <div className="md-flow-tile-inner relative">
-                <Image src={t.src} alt={t.name} fill className="object-contain p-4" />
+                <Image src={t.src} alt={t.name} fill className="object-contain p-2" />
               </div>
             </div>
           ))}
