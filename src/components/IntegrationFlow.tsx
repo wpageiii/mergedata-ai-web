@@ -110,7 +110,6 @@ export default function IntegrationFlow({
         <p className="text-xs text-zinc-400">
           <span className="font-semibold text-zinc-200">Tier 1 + Tier 2</span> integrations floating into Kai → MergeData.
           <span className="ml-2 text-zinc-500">(Animated on desktop. Hidden if “Reduce motion” is enabled.)</span>
-          <span className="ml-2 text-zinc-600">build: test</span>
         </p>
       </div>
     </div>
