@@ -40,25 +40,29 @@ body {
     transform: translate3d(100vw, calc(var(--drift, 0px) + 0px), 0) scale(0.92);
     opacity: 0.98;
   }
-  /* visible pop */
-  83% {
-    transform: translate3d(108vw, calc(var(--drift, 0px) - 10px), 0) scale(1.28);
-    opacity: 1;
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.35)) drop-shadow(0 0 28px rgba(34, 211, 238, 0.22));
+  /* visible pop (make it unmistakable) */
+  82% {
+    transform: translate3d(106vw, calc(var(--drift, 0px) + 0px), 0) scale(0.92);
+    opacity: 0.98;
   }
-  /* fall off (stay visible while dropping, then fade) */
-  88% {
-    transform: translate3d(118vw, calc(var(--drift, 0px) + 70px), 0) scale(0.92) rotate(10deg);
+  83% {
+    transform: translate3d(108vw, calc(var(--drift, 0px) - 18px), 0) scale(1.6);
+    opacity: 1;
+    filter: drop-shadow(0 0 26px rgba(255, 255, 255, 0.45)) drop-shadow(0 0 36px rgba(34, 211, 238, 0.28));
+  }
+  /* fall off (fast and obvious) */
+  86% {
+    transform: translate3d(114vw, calc(var(--drift, 0px) + 140px), 0) scale(0.95) rotate(18deg);
     opacity: 1;
     filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.18)) blur(0px);
   }
-  94% {
-    transform: translate3d(128vw, calc(var(--drift, 0px) + 220px), 0) scale(0.62) rotate(18deg);
-    opacity: 0.18;
-    filter: blur(0.6px);
+  92% {
+    transform: translate3d(126vw, calc(var(--drift, 0px) + 420px), 0) scale(0.55) rotate(38deg);
+    opacity: 0.12;
+    filter: blur(0.9px);
   }
   100% {
-    transform: translate3d(140vw, calc(var(--drift, 0px) + 320px), 0) scale(0.55) rotate(22deg);
+    transform: translate3d(140vw, calc(var(--drift, 0px) + 520px), 0) scale(0.45) rotate(46deg);
     opacity: 0;
     filter: blur(1px);
   }
