@@ -78,7 +78,18 @@ export async function POST(req: Request) {
 
   const subject = "MergeData.ai — Contact Us submission";
 
-  const capturedAt = new Date().toISOString();
+  const capturedAtUtc = new Date();
+  const capturedAtUtcIso = capturedAtUtc.toISOString();
+  const capturedAtCst = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Chicago",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  }).format(capturedAtUtc);
 
   const text = [
     "New inbound message from the MergeData.ai website contact form.",
@@ -95,7 +106,8 @@ export async function POST(req: Request) {
     message,
     "",
     "Metadata:",
-    `- Captured At (UTC): ${capturedAt}`,
+    `- Captured At (UTC): ${capturedAtUtcIso}`,
+    `- Captured At (CST): ${capturedAtCst}`,
   ].join("\n");
 
   try {
