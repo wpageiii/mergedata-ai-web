@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-// import nodemailer from "nodemailer";
 
 type Payload = {
   name?: string;
@@ -14,6 +13,40 @@ function badRequest(message: string) {
 
 function validateEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+}
+
+async function sendViaMailgun(params: {
+  to: string;
+  from: string;
+  subject: string;
+  text: string;
+  replyTo?: string;
+}) {
+  const apiKey = process.env.MAILGUN_API_KEY;
+  const domain = process.env.MAILGUN_DOMAIN;
+
+  if (!apiKey) throw new Error("Missing MAILGUN_API_KEY");
+  if (!domain) throw new Error("Missing MAILGUN_DOMAIN");
+
+  const body = new URLSearchParams();
+  body.set("to", params.to);
+  body.set("from", params.from);
+  body.set("subject", params.subject);
+  body.set("text", params.text);
+  if (params.replyTo) body.set("h:Reply-To", params.replyTo);
+
+  const res = await fetch(`https://api.mailgun.net/v3/${domain}/messages`, {
+    method: "POST",
+    headers: {
+      Authorization: `Basic ${Buffer.from(`api:${apiKey}`).toString("base64")}`,
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body,
+  });
+
+  const text = await res.text();
+  if (!res.ok) throw new Error(`Mailgun error (${res.status}): ${text}`);
+  return text;
 }
 
 export async function POST(req: Request) {
@@ -34,18 +67,58 @@ export async function POST(req: Request) {
   if (!dealership) return badRequest("Dealership/Group is required");
   if (!phone) return badRequest("Phone is required");
 
-  // NOTE: Email delivery intentionally disabled for now.
-  // We still validate + capture the lead so the UX is functional.
-  // When ready, wire SMTP (or a provider like Postmark/Resend) and send to:
-  // - william.page@mergedata.io
-  // - (later) josh.blick@mergedata.io
-  console.log("[demo-request] lead captured (email delivery disabled)", {
-    name,
-    email,
-    dealership,
-    phone,
-    capturedAt: new Date().toISOString(),
-  });
+  const to = process.env.MAIL_TO;
+  const from = process.env.MAIL_FROM;
 
-  return NextResponse.json({ ok: true, delivered: false });
+  if (!to) return new NextResponse("Missing MAIL_TO", { status: 500 });
+  if (!from) return new NextResponse("Missing MAIL_FROM", { status: 500 });
+
+  const capturedAtUtc = new Date();
+  const capturedAtUtcIso = capturedAtUtc.toISOString();
+  const capturedAtCst = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Chicago",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  }).format(capturedAtUtc);
+
+  const subject = "MergeData.ai — Demo request";
+
+  const text = [
+    "New inbound demo request from the MergeData.ai website.",
+    "",
+    "Source:",
+    "- Endpoint: /api/demo-request",
+    "- Page: https://mergedata.ai",
+    "",
+    "Contact:",
+    `- Name: ${name}`,
+    `- Email: ${email}`,
+    `- Dealership/Group: ${dealership}`,
+    `- Phone: ${phone}`,
+    "",
+    "Metadata:",
+    `- Captured At (UTC): ${capturedAtUtcIso}`,
+    `- Captured At (CST): ${capturedAtCst}`,
+  ].join("\n");
+
+  try {
+    await sendViaMailgun({
+      to,
+      from,
+      subject,
+      text,
+      replyTo: email,
+    });
+
+    return NextResponse.json({ ok: true, delivered: true });
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : "Unknown error";
+    console.error("[demo-request] failed to deliver", msg);
+    return new NextResponse("Unable to deliver message", { status: 502 });
+  }
 }
