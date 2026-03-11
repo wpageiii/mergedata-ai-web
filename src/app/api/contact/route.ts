@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { contactFormRateLimit } from "@/lib/ratelimit";
 
 type Payload = {
   name?: string;
@@ -54,6 +55,26 @@ async function sendViaMailgun(params: {
 }
 
 export async function POST(req: Request) {
+  // Basic rate limiting (server-side) to prevent spam.
+  // Note: x-forwarded-for may contain multiple IPs; take the first.
+  const forwardedFor = req.headers.get("x-forwarded-for") || "";
+  const ip = (forwardedFor.split(",")[0] || "").trim() || "unknown";
+
+  try {
+    const rl = await contactFormRateLimit.limit(ip);
+    if (!rl.success) {
+      const res = new NextResponse("Too Many Requests", { status: 429 });
+      // Upstash provides reset time (ms). Convert to seconds.
+      const retryAfter = Math.max(1, Math.ceil((rl.reset - Date.now()) / 1000));
+      res.headers.set("Retry-After", String(retryAfter));
+      return res;
+    }
+  } catch (err) {
+    // If rate limiting is misconfigured, do not hard-fail the contact form.
+    // We still log so we can fix env vars.
+    console.error("[contact] rate limit error", err);
+  }
+
   let body: Payload;
   try {
     body = (await req.json()) as Payload;
