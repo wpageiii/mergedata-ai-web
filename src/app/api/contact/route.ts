@@ -76,19 +76,26 @@ export async function POST(req: Request) {
   if (!to) return new NextResponse("Missing MAIL_TO", { status: 500 });
   if (!from) return new NextResponse("Missing MAIL_FROM", { status: 500 });
 
-  const subject = "MergeData.ai — Contact Form";
+  const subject = "MergeData.ai — Contact Us submission";
+
+  const capturedAt = new Date().toISOString();
 
   const text = [
-    "New contact form submission:",
+    "New inbound message from the MergeData.ai website contact form.",
     "",
-    `Name: ${name}`,
-    `Email: ${email}`,
-    company ? `Company: ${company}` : "Company: (not provided)",
+    "Source:",
+    "- Page: https://mergedata.ai/contact",
+    "",
+    "Contact:",
+    `- Name: ${name}`,
+    `- Email: ${email}`,
+    `- Company: ${company || "(not provided)"}`,
     "",
     "Message:",
     message,
     "",
-    `Captured At (UTC): ${new Date().toISOString()}`,
+    "Metadata:",
+    `- Captured At (UTC): ${capturedAt}`,
   ].join("\n");
 
   try {
