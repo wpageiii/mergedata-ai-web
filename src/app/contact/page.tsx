@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { Footer } from "@/components/Footer";
+import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -34,24 +35,9 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="rounded-3xl bg-white/5 p-7 ring-1 ring-white/10">
-            <div className="text-sm font-semibold text-white">Quick intake (placeholder)</div>
-            <p className="mt-2 text-sm text-zinc-300">
-              Want this as a real form? Tell me your preference:
-            </p>
-            <ul className="mt-4 space-y-2 text-sm text-zinc-300">
-              <li>• Simple email form (Resend / Postmark)</li>
-              <li>• HubSpot forms</li>
-              <li>• Airtable / Notion capture</li>
-            </ul>
-
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link
-                href="mailto:hello@mergedata.ai?subject=MergeData.ai%20Demo%20Request"
-                className="inline-flex h-11 items-center justify-center rounded-full bg-white px-5 text-sm font-semibold text-black hover:bg-zinc-200"
-              >
-                Email demo request
-              </Link>
+          <div className="space-y-4">
+            <ContactForm />
+            <div className="flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/"
                 className="inline-flex h-11 items-center justify-center rounded-full bg-white/5 px-5 text-sm font-semibold text-white ring-1 ring-white/15 hover:bg-white/10"
