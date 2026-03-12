@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { DemoRequestButton } from "@/components/DemoRequestButton";
 
 export function Footer() {
   return (
@@ -44,9 +45,7 @@ export function Footer() {
             <div className="text-sm font-semibold text-white">Company</div>
             <ul className="space-y-2 text-sm text-zinc-400">
               <li>
-                <Link href="/contact" className="hover:text-white">
-                  Contact
-                </Link>
+                <DemoRequestButton variant="text">Contact</DemoRequestButton>
               </li>
               <li>
                 <a href="mailto:hello@mergedata.ai" className="hover:text-white">

@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { Footer } from "@/components/Footer";
-import { ContactForm } from "@/components/ContactForm";
+import { DemoRequestButton } from "@/components/DemoRequestButton";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Request a demo",
 };
 
 export default function ContactPage() {
@@ -36,7 +36,12 @@ export default function ContactPage() {
           </div>
 
           <div className="space-y-4">
-            <ContactForm />
+            <DemoRequestButton autoOpen className="inline-flex h-11 items-center justify-center rounded-full bg-emerald-400 px-5 text-sm font-semibold text-black hover:bg-emerald-300">
+              Request a demo
+            </DemoRequestButton>
+            <div className="text-sm text-zinc-300">
+              We’re consolidating demo requests into a single in-page form.
+            </div>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/"

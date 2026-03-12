@@ -16,8 +16,14 @@ function validateEmail(email: string) {
 
 export function DemoRequestButton({
   variant = "default",
+  className,
+  children = "Request a demo",
+  autoOpen = false,
 }: {
-  variant?: "default" | "accent";
+  variant?: "default" | "accent" | "indigo" | "text";
+  className?: string;
+  children?: React.ReactNode;
+  autoOpen?: boolean;
 }) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -28,6 +34,10 @@ export function DemoRequestButton({
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useEffect(() => {
+    if (autoOpen) setOpen(true);
+  }, [autoOpen]);
 
   const canSubmit = useMemo(() => {
     if (!form.name.trim()) return false;
@@ -73,12 +83,17 @@ export function DemoRequestButton({
         type="button"
         onClick={() => setOpen(true)}
         className={
-          variant === "accent"
+          className ??
+          (variant === "accent"
             ? "inline-flex rounded-full bg-emerald-400 px-4 py-2 text-sm font-semibold text-black hover:bg-emerald-300"
-            : "inline-flex rounded-full bg-white px-4 py-2 text-sm font-semibold text-black hover:bg-zinc-200"
+            : variant === "indigo"
+              ? "inline-flex h-11 items-center justify-center rounded-full bg-indigo-500 px-5 text-sm font-semibold text-white hover:bg-indigo-400"
+              : variant === "text"
+                ? "text-sm text-zinc-400 hover:text-white"
+                : "inline-flex rounded-full bg-white px-4 py-2 text-sm font-semibold text-black hover:bg-zinc-200")
         }
       >
-        Request a demo
+        {children}
       </button>
 
       {open && mounted

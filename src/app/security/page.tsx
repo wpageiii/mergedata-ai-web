@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { Footer } from "@/components/Footer";
+import { DemoRequestButton } from "@/components/DemoRequestButton";
 
 export const metadata: Metadata = {
   title: "Security",
@@ -68,12 +68,11 @@ export default function SecurityPage() {
               walk through our approach.
             </p>
             <div className="mt-4 flex flex-col gap-3 sm:flex-row">
-              <Link
-                href="/contact"
+              <DemoRequestButton
                 className="inline-flex h-11 items-center justify-center rounded-full bg-emerald-400 px-5 text-sm font-semibold text-black hover:bg-emerald-300"
               >
                 Contact us
-              </Link>
+              </DemoRequestButton>
               <a
                 href="mailto:hello@mergedata.ai?subject=MergeData%20Security%20Questions"
                 className="inline-flex h-11 items-center justify-center rounded-full bg-white/5 px-5 text-sm font-semibold text-white ring-1 ring-white/15 hover:bg-white/10"

@@ -1,7 +1,7 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import { SiteNav } from "@/components/SiteNav";
 import { Footer } from "@/components/Footer";
+import { DemoRequestButton } from "@/components/DemoRequestButton";
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -14,7 +14,6 @@ function Plan({
   desc,
   bullets,
   cta,
-  href,
   highlight,
   badge,
 }: {
@@ -24,7 +23,6 @@ function Plan({
   desc: string;
   bullets: string[];
   cta: string;
-  href: string;
   highlight?: boolean;
   badge?: string;
 }) {
@@ -62,8 +60,7 @@ function Plan({
           </li>
         ))}
       </ul>
-      <Link
-        href={href}
+      <DemoRequestButton
         className={
           "mt-auto inline-flex h-11 w-full items-center justify-center rounded-full px-5 text-sm font-semibold " +
           (highlight
@@ -72,7 +69,7 @@ function Plan({
         }
       >
         {cta}
-      </Link>
+      </DemoRequestButton>
     </div>
   );
 }
@@ -102,7 +99,6 @@ export default function PricingPage() {
               "No terms — cancel anytime",
             ]}
             cta="Request a demo"
-            href="/contact"
             highlight
           />
           <Plan
@@ -116,7 +112,6 @@ export default function PricingPage() {
               "No terms — cancel anytime",
             ]}
             cta="Contact us"
-            href="/contact"
           />
         </div>
 

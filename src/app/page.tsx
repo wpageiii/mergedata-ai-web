@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
+import { DemoRequestButton } from "@/components/DemoRequestButton";
 import { Footer } from "@/components/Footer";
 import { LogoCarousel } from "@/components/LogoCarousel";
 import IntegrationFlow from "@/components/IntegrationFlow";
@@ -54,12 +55,7 @@ export default function Home() {
               </p>
 
               <div id="demo" className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link
-                  href="/contact"
-                  className="inline-flex h-11 items-center justify-center rounded-full bg-indigo-500 px-5 text-sm font-semibold text-white hover:bg-indigo-400"
-                >
-                  Request a demo
-                </Link>
+                <DemoRequestButton variant="indigo" />
                 <Link
                   href="#how"
                   className="inline-flex h-11 items-center justify-center rounded-full bg-white/5 px-5 text-sm font-semibold text-white ring-1 ring-white/15 hover:bg-white/10"
