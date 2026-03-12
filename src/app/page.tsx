@@ -16,14 +16,6 @@ function Pill({ children }: { children: React.ReactNode }) {
   );
 }
 
-function FeatureCard({ title, desc }: { title: string; desc: string }) {
-  return (
-    <div className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-      <div className="text-base font-semibold text-white">{title}</div>
-      <div className="mt-2 text-sm leading-6 text-zinc-300">{desc}</div>
-    </div>
-  );
-}
 
 export default function Home() {
   return (
@@ -450,9 +442,6 @@ export default function Home() {
               <li className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-400" />Happy to support security questionnaires during evaluation.</li>
             </ul>
 
-            <div className="mt-4 text-xs text-zinc-400">
-              Note: We are not SOC 2 certified today; we can walk you through our standards and controls.
-            </div>
           </div>
         </div>
       </section>
