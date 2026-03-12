@@ -30,7 +30,7 @@ export default function SecurityPage() {
             Built to earn trust.
           </h1>
           <p className="mt-4 max-w-3xl text-sm leading-6 text-zinc-300 md:text-base">
-            We take dealer data seriously. While we are not SOC 2 certified today, we operate with strong security
+            We take dealer data seriously. We operate with strong security
             standards and are happy to walk through controls, architecture, and customer requirements during
             evaluation.
           </p>
@@ -73,12 +73,7 @@ export default function SecurityPage() {
               >
                 Contact us
               </DemoRequestButton>
-              <a
-                href="mailto:hello@mergedata.ai?subject=MergeData%20Security%20Questions"
-                className="inline-flex h-11 items-center justify-center rounded-full bg-white/5 px-5 text-sm font-semibold text-white ring-1 ring-white/15 hover:bg-white/10"
-              >
-                Email security questions
-              </a>
+              {/* Email security CTA removed (single demo-request modal flow). */}
             </div>
             <div className="mt-4 text-xs text-zinc-400">
               Note: We’ll never claim certifications we don’t have. We’ll share what we do have.
