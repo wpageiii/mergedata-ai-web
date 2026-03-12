@@ -134,8 +134,8 @@ export default function TermsPage() {
         <H2>14) Contact</H2>
         <P>
           Questions about these Terms? Contact us at{" "}
-          <a className="text-indigo-300 hover:text-indigo-200" href="mailto:hello@mergedata.ai">
-            hello@mergedata.ai
+          <a className="text-indigo-300 hover:text-indigo-200" href="mailto:leads@mergedata.io">
+            leads@mergedata.io
           </a>
           .
         </P>

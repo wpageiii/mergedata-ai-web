@@ -162,7 +162,7 @@ export function ContactForm() {
         ) : null}
 
         <div className="text-xs text-zinc-400">
-          Prefer email? <a className="underline hover:text-white" href="mailto:hello@mergedata.ai">hello@mergedata.ai</a>
+          Prefer email? <a className="underline hover:text-white" href="mailto:leads@mergedata.io">leads@mergedata.io</a>
         </div>
       </form>
     </div>

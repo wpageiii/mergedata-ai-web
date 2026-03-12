@@ -100,8 +100,8 @@ export default function PrivacyPage() {
         <H2>7) Your choices</H2>
         <P>
           You may request access, correction, or deletion of certain personal information by contacting us at{" "}
-          <a className="text-indigo-300 hover:text-indigo-200" href="mailto:hello@mergedata.ai">
-            hello@mergedata.ai
+          <a className="text-indigo-300 hover:text-indigo-200" href="mailto:leads@mergedata.io">
+            leads@mergedata.io
           </a>
           . We may need to verify your request and may retain certain information as required by law.
         </P>
@@ -118,8 +118,8 @@ export default function PrivacyPage() {
         <H2>10) Contact</H2>
         <P>
           If you have questions about this Privacy Policy, email{" "}
-          <a className="text-indigo-300 hover:text-indigo-200" href="mailto:hello@mergedata.ai">
-            hello@mergedata.ai
+          <a className="text-indigo-300 hover:text-indigo-200" href="mailto:leads@mergedata.io">
+            leads@mergedata.io
           </a>
           .
         </P>

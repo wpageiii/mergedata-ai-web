@@ -24,10 +24,10 @@ export default function ContactPage() {
             <div className="mt-8 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
               <div className="text-sm font-semibold text-white">Email</div>
               <a
-                href="mailto:hello@mergedata.ai"
+                href="mailto:leads@mergedata.io"
                 className="mt-2 block text-sm text-zinc-200 hover:text-white"
               >
-                hello@mergedata.ai
+                leads@mergedata.io
               </a>
               <div className="mt-6 text-xs text-zinc-400">
                 (We can wire this page up to a form handler, HubSpot, or your CRM when you’re ready.)

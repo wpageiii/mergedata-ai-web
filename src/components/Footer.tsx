@@ -48,8 +48,8 @@ export function Footer() {
                 <DemoRequestButton variant="text">Contact</DemoRequestButton>
               </li>
               <li>
-                <a href="mailto:hello@mergedata.ai" className="hover:text-white">
-                  hello@mergedata.ai
+                <a href="mailto:leads@mergedata.io" className="hover:text-white">
+                  leads@mergedata.io
                 </a>
               </li>
             </ul>
